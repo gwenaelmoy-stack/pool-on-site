@@ -5,6 +5,9 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000
 
-# Keep the test address out of search engines.
+# Keep the test addresses out of search engines.
+https://pool-on-site.gwenaelmoy.workers.dev/*
+  X-Robots-Tag: noindex
+
 https://:project.pages.dev/*
   X-Robots-Tag: noindex

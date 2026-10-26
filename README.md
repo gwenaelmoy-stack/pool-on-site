@@ -14,11 +14,11 @@ Site statique de [pool-on.com](https://www.pool-on.com), en anglais (racine) et 
 
 Un navigateur réglé en français est envoyé vers `/fr/`, les autres restent en anglais. Le choix fait avec le bouton EN/FR est mémorisé dans le navigateur.
 
-## Mise en ligne (Cloudflare Pages)
+## Mise en ligne (Cloudflare Workers)
 
-- Commande de build : aucune.
-- Dossier de sortie : `site`.
-- `site/_headers` ajoute les en-têtes de sécurité et empêche l'indexation de l'adresse de test `*.pages.dev`.
+- Déployé automatiquement par Cloudflare à chaque push sur `main` (`npx wrangler deploy`, réglages dans `wrangler.jsonc`).
+- Adresse de test : https://pool-on-site.gwenaelmoy.workers.dev
+- `site/_headers` ajoute les en-têtes de sécurité et empêche l'indexation de l'adresse de test.
 
 ## Reste à faire avant la bascule de pool-on.com
 
