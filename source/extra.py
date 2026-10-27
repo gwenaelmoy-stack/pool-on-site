@@ -144,12 +144,21 @@ def no_break(h):
         out.append(part)
     return ''.join(out)
 
+def new_tab(h):
+    # Links to other sites (social networks, press, YouTube) open in a new tab.
+    def fix(m):
+        tag = m.group(0)
+        if 'target=' in tag or 'pool-on.com' in tag:
+            return tag
+        return tag[:-1] + ' target="_blank" rel="noopener">'
+    return re.sub(r'<a\s[^>]*href="https?://[^"]*"[^>]*>', fix, h)
+
 def wrap_brand():
     files = [os.path.join(SITE, 'fr' if l == 'fr' else '', p + '.html') for l in ('en', 'fr') for p in PAGES]
     files += [os.path.join(SITE, '404.html'), os.path.join(HERE, 'artifact-index.html')]
     for f in files:
         h = open(f).read()
-        open(f, 'w').write(no_break(h))
+        open(f, 'w').write(new_tab(no_break(h)))
 
 not_found()
 wrap_brand()
