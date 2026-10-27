@@ -346,7 +346,7 @@ def build():
         <h2 id="ref-title">Already in the water</h2>
       </div>
       <div class="refs">
-        <article class="ref"><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a hotel rooftop pool" loading="lazy" style="object-position:50% 70%"><div class="body"><b>Luxury hotel</b><small>Rooftop pool show · 2025</small></div></article>
+        <article class="ref"><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On unit projects images under the water" loading="lazy"><div class="body"><b>Hotel event</b><small>Evening dinner around the pool</small></div></article>
         <article class="ref"><img src="assets/event.webp" alt="Pool-On unit set up at an evening garden party" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-unit night show · 2025</small></div></article>
         <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · 2025</small></div></article>
       </div>
@@ -478,7 +478,7 @@ def build():
     <div class="wrap">
       <div class="head"><span class="eyebrow">Intellectual property</span><h2 id="pat-title">Patented in France, filed worldwide</h2></div>
       <div class="patent">
-        <div class="no"><small>French patent granted</small>FR 3 141 958</div>
+        <div class="no"><small>Pool-On system</small>Patented</div>
         <div>
           <p>The Pool-On projection system is protected by a granted French patent, with international applications under the PCT. POOL-ON is a registered EU trademark.</p>
           <ul aria-label="Patent coverage"><li>FR · granted</li><li>EP · pending</li><li>US · pending</li><li>CN · pending</li><li>AU · pending</li></ul>
@@ -495,8 +495,8 @@ def build():
     <div class="wrap">
       <div class="stack">
         <article class="split">
-          <img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a hotel pool at night" loading="lazy">
-          <div class="txt"><span class="eyebrow">Hotel · 2025</span><h2>Luxury hotel</h2><p>A night-time Van Gogh show in the hotel pool, for guests and partners.</p></div>
+          <img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On unit projects images under the water" loading="lazy">
+          <div class="txt"><span class="eyebrow">Hotel · Event</span><h2>Hotel event</h2><p>An evening dinner around the hotel pool: the Pool-On unit sits on the edge and turns the water into a screen for the guests.</p></div>
         </article>
         <article class="split rev">
           <img src="assets/fish.webp" alt="Fish projected into a pool at night" loading="lazy">
@@ -587,7 +587,7 @@ def build():
         </dl>
       </section>
       <section><h2>Hosting</h2><p>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. www.cloudflare.com</p></section>
-      <section><h2>Intellectual property</h2><p>POOL-ON is a registered EU trademark (EUIPO no. 018650491). The Pool-On system is protected by French patent FR 3 141 958. All content on this site belongs to Pool-On unless stated otherwise. Optoma and DuraCore are trademarks of their respective owner.</p></section>
+      <section><h2>Intellectual property</h2><p>POOL-ON is a registered EU trademark (EUIPO no. 018650491). The Pool-On system is protected by a French patent. All content on this site belongs to Pool-On unless stated otherwise. Optoma and DuraCore are trademarks of their respective owner.</p></section>
       <section><h2>Personal data</h2><p>Information sent through the contact form is used only to answer your request and manage the commercial relationship. It is kept for no longer than three years after our last contact. You can ask to access, correct or delete your data by writing to contact@pool-on.com. You can also file a complaint with the CNIL.</p></section>
       <section><h2>Cookies</h2><p>This site sets no advertising or tracking cookies. YouTube videos load only after you press play.</p></section>
     </div>
