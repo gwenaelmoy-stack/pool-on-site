@@ -523,8 +523,7 @@ def build():
       <div>
         <h2 id="contact-title">Talk to us</h2>
         <dl>
-          <dt>Email</dt><dd>contact@pool-on.fr <span class="todo">.fr ou .com ?</span></dd>
-          <dt>Phone</dt><dd><span class="todo">à fournir</span></dd>
+          <dt>Email</dt><dd><a href="mailto:contact@pool-on.com">contact@pool-on.com</a></dd>
           <dt>Office</dt><dd>943 voie Antiope, 13600 La Ciotat, France</dd>
           <dt>Distributors</dt><dd>Ask for the partner kit</dd>
         </dl>
@@ -572,12 +571,12 @@ def build():
           <dt>Registration</dt><dd>RCS Marseille 909 766 222</dd>
           <dt>VAT</dt><dd><span class="todo">n° TVA à fournir</span></dd>
           <dt>Publication director</dt><dd><span class="todo">nom du président</span></dd>
-          <dt>Contact</dt><dd>contact@pool-on.fr</dd>
+          <dt>Contact</dt><dd>contact@pool-on.com</dd>
         </dl>
       </section>
       <section><h2>Hosting</h2><p><span class="todo">Hébergeur à préciser (ex. Cloudflare Pages ou Netlify) avec adresse</span></p></section>
       <section><h2>Intellectual property</h2><p>POOL-ON is a registered EU trademark (EUIPO no. 018650491). The Pool-On system is protected by French patent FR 3 141 958. All content on this site belongs to Pool-On unless stated otherwise. Optoma and DuraCore are trademarks of their respective owner.</p></section>
-      <section><h2>Personal data</h2><p>Information sent through the contact form is used only to answer your request and manage the commercial relationship. It is kept for no longer than three years after our last contact. You can ask to access, correct or delete your data by writing to contact@pool-on.fr. You can also file a complaint with the CNIL.</p></section>
+      <section><h2>Personal data</h2><p>Information sent through the contact form is used only to answer your request and manage the commercial relationship. It is kept for no longer than three years after our last contact. You can ask to access, correct or delete your data by writing to contact@pool-on.com. You can also file a complaint with the CNIL.</p></section>
       <section><h2>Cookies</h2><p>This site sets no advertising or tracking cookies. YouTube videos load only after you press play.</p></section>
     </div>
   </section>'''
