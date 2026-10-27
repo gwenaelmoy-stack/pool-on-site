@@ -578,7 +578,7 @@ def build():
       <div class="head"><span class="eyebrow">Legal</span><h1 style="font-size:clamp(2.4rem,6vw,4rem);text-transform:uppercase">Legal notice &amp; privacy</h1></div>
       <section><h2>Publisher</h2>
         <dl>
-          <dt>Company</dt><dd>Pool-On SAS <span class="todo">capital social à fournir</span></dd>
+          <dt>Company</dt><dd>Pool-On SAS, share capital €1,155.80</dd>
           <dt>Registered office</dt><dd>943 voie Antiope, 13600 La Ciotat, France</dd>
           <dt>Registration</dt><dd>RCS Marseille 909 766 222</dd>
           <dt>VAT</dt><dd>FR75 909 766 222</dd>

@@ -188,6 +188,7 @@ FR = {
 "France 3 Provence-Alpes-Côte d’Azur report": "Reportage France 3 Provence-Alpes-Côte d’Azur",
 "Gwénaël Moy, President": "Gwénaël Moy, président",
 "Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. www.cloudflare.com": "Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. www.cloudflare.com",
+"Pool-On SAS, share capital €1,155.80": "Pool-On SAS, au capital de 1 155,80 €",
 "Videos load from YouTube only when you press play.": "Les vidéos se chargent depuis YouTube seulement quand vous appuyez sur lecture.",
 "All videos on our YouTube channel →": "Toutes les vidéos sur notre chaîne YouTube →",
 "Try the content in your pool": "Testez les contenus dans votre piscine",
