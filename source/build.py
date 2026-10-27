@@ -399,8 +399,7 @@ def build():
         <a class="more" href="contact.html">Ask for the partner kit →</a>
       </div>
     </div>
-  </section>
-{cta()}'''
+  </section>'''
     page('solutions.html', 'Solutions · Pool-On', 'Pool-On for public pools, hotels and resorts, aquafitness clubs and events.', 'solutions.html', sol)
 
     # ---------- Content ----------
@@ -503,7 +502,7 @@ def build():
       </div>
     </div>
   </section>
-''' + cta()
+'''
     page('technology.html', 'Technology · Pool-On', 'PO-1.2 specifications: 0.80 to 2 m depth, 18 kg, Optoma laser, IP5X and IP69K, 24/7 low voltage, patented.', 'technology.html', tech)
 
     # ---------- References ----------
