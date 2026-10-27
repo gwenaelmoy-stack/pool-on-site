@@ -1,6 +1,6 @@
 # Pool-On
 
-> Pool-On (SAS Pool-On, La Ciotat, France) makes the PO-1.1, a mobile underwater video projector that sits on the edge of a swimming pool and turns the water into a screen, to play, learn, work out, recover and relax. Patented system, laser projection technology by Optoma. POOL-ON is a registered EU trademark.
+> Pool-On (SAS Pool-On, La Ciotat, France) makes the PO-1.2, a mobile underwater video projector that sits on the edge of a swimming pool and turns the water into a screen, to play, learn, work out, recover and relax. Patented system, laser projection technology by Optoma. POOL-ON is a registered EU trademark.
 
 ## Who it is for
 - Public pools and aquatic centres: swim lessons, aquagym, events that bring people back to the water.

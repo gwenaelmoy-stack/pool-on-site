@@ -67,7 +67,7 @@ def structured_data(lang):
            'address': {'@type': 'PostalAddress', 'streetAddress': '943 voie Antiope', 'postalCode': '13600',
                        'addressLocality': 'La Ciotat', 'addressCountry': 'FR'},
            'sameAs': SOCIAL}
-    product = {'@type': 'Product', 'name': 'Pool-On PO-1.1', 'description': desc,
+    product = {'@type': 'Product', 'name': 'Pool-On PO-1.2', 'description': desc,
                'brand': {'@id': DOMAIN + '/#org'}, 'manufacturer': {'@id': DOMAIN + '/#org'},
                'image': DOMAIN + '/assets/unit-beam.webp', 'url': url('technology', lang)}
     site = {'@type': 'WebSite', '@id': DOMAIN + '/#site', 'name': 'Pool-On', 'url': DOMAIN + '/',
@@ -106,7 +106,7 @@ def seo():
 def llms():
     open(os.path.join(SITE, 'llms.txt'), 'w').write("""# Pool-On
 
-> Pool-On (SAS Pool-On, La Ciotat, France) makes the PO-1.1, a mobile underwater video projector that sits on the edge of a swimming pool and turns the water into a screen, to play, learn, work out, recover and relax. Patented system, laser projection technology by Optoma. POOL-ON is a registered EU trademark.
+> Pool-On (SAS Pool-On, La Ciotat, France) makes the PO-1.2, a mobile underwater video projector that sits on the edge of a swimming pool and turns the water into a screen, to play, learn, work out, recover and relax. Patented system, laser projection technology by Optoma. POOL-ON is a registered EU trademark.
 
 ## Who it is for
 - Public pools and aquatic centres: swim lessons, aquagym, events that bring people back to the water.

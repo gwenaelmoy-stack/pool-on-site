@@ -219,7 +219,7 @@ nav.main a[aria-current="page"] { color: var(--fg); text-decoration: underline; 
 .legal dd { margin: 0; overflow-wrap: anywhere; min-width: 0; }
 .legal .todo, .contact .todo { white-space: normal; }
 .legal p { color: var(--muted); }
-/* Home hero: the PO-1.1 YouTube film from the current site, full-bleed behind the title */
+/* Home hero: the PO-1.2 YouTube film from the current site, full-bleed behind the title */
 .hero-yt { min-height: min(88vh, 52rem); display: grid; align-items: center; background: #000; }
 .hero-yt .yt-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity .8s; }
 .hero-yt .yt-bg.playing { opacity: 1; }

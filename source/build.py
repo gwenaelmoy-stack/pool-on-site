@@ -61,7 +61,7 @@ nav.main a[aria-current="page"] { color: var(--fg); text-decoration: underline; 
 .legal dd { margin: 0; overflow-wrap: anywhere; min-width: 0; }
 .legal .todo, .contact .todo { white-space: normal; }
 .legal p { color: var(--muted); }
-/* Home hero: the PO-1.1 YouTube film from the current site, full-bleed behind the title */
+/* Home hero: the PO-1.2 YouTube film from the current site, full-bleed behind the title */
 .hero-yt { min-height: min(88vh, 52rem); display: grid; align-items: center; background: #000; }
 .hero-yt .yt-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity .8s; }
 .hero-yt .yt-bg.playing { opacity: 1; }
@@ -263,7 +263,7 @@ def build():
     home = f'''  <section class="hero hero-yt" aria-labelledby="hero-title">
     <img class="bgimg" src="assets/hero-swimmer.webp" alt="" width="1600" height="900">
     <div class="yt-bg" aria-hidden="true">
-      <iframe id="hero-yt" src="https://www.youtube-nocookie.com/embed/P-LIjyV7Huk?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=P-LIjyV7Huk&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;iv_load_policy=3&amp;disablekb=1&amp;enablejsapi=1" title="Pool-On PO-1.1 film" allow="autoplay; encrypted-media" tabindex="-1"></iframe>
+      <iframe id="hero-yt" src="https://www.youtube-nocookie.com/embed/P-LIjyV7Huk?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=P-LIjyV7Huk&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;modestbranding=1&amp;iv_load_policy=3&amp;disablekb=1&amp;enablejsapi=1" title="Pool-On PO-1.2 film" allow="autoplay; encrypted-media" tabindex="-1"></iframe>
     </div>
     <button class="vid-toggle" type="button" id="hero-toggle" aria-pressed="false">Pause video</button>
     <div class="wrap">
@@ -288,9 +288,9 @@ def build():
 
   <section class="block" aria-labelledby="intro-title">
     <div class="wrap split">
-      <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.1 unit turning, with the Pool-On logo"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
+      <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 unit turning, with the Pool-On logo"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
       <div class="txt">
-        <span class="eyebrow">The new PO-1.1</span>
+        <span class="eyebrow">The new PO-1.2</span>
         <h2 id="intro-title">Live never-seen-before experiences</h2>
         <p>A mobile projector that sits on the pool edge and turns the water into a screen, to play, learn, work out, recover and relax.</p>
         <a class="more" href="technology.html">Discover the technology →</a>
@@ -435,9 +435,9 @@ def build():
     tech = phero('unit-beam.webp', 'Technology', 'Built for <em>chlorinated water</em> and daily use', 'A patented, mobile underwater projection system with an Optoma laser engine, rated for continuous use.', '50% 60%') + '''
   <section class="block" aria-labelledby="spec-title">
     <div class="wrap">
-      <div class="head"><span class="eyebrow">PO-1.1</span><h2 id="spec-title">Specifications</h2></div>
+      <div class="head"><span class="eyebrow">PO-1.2</span><h2 id="spec-title">Specifications</h2></div>
       <div class="tech">
-        <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.1 unit turning"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
+        <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 unit turning"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
         <div>
           <table class="specs">
             <tbody>
@@ -487,7 +487,7 @@ def build():
     </div>
   </section>
 ''' + cta()
-    page('technology.html', 'Technology · Pool-On', 'PO-1.1 specifications: 0.80 to 2 m depth, 18 kg, Optoma laser, IP5X and IP69K, 24/7 low voltage, patented.', 'technology.html', tech)
+    page('technology.html', 'Technology · Pool-On', 'PO-1.2 specifications: 0.80 to 2 m depth, 18 kg, Optoma laser, IP5X and IP69K, 24/7 low voltage, patented.', 'technology.html', tech)
 
     # ---------- References ----------
     refs = phero('vangogh-night.webp', 'References', 'Already <em>in the water</em>', 'Hotels, events and pools where Pool-On has already been installed or shown.', '50% 60%') + f'''
@@ -508,7 +508,7 @@ def build():
         </article>
       </div>
       <div class="shots">
-        <figure><img src="assets/unit-beam.webp" alt="Pool-On unit clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.1 on the pool edge</figcaption></figure>
+        <figure><img src="assets/unit-beam.webp" alt="Pool-On unit clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.2 on the pool edge</figcaption></figure>
         <figure><img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a pool at night" loading="lazy"><figcaption>Van Gogh night show · 2025</figcaption></figure>
         <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
       </div>
