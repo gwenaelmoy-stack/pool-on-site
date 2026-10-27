@@ -231,13 +231,13 @@ MARKETS = [
     ('public', 'Public pools · aquatic centres', 'Fill the off-peak hours', 'coach.webp', 'A coach runs a projected swim lesson from a tablet at the pool edge',
      'Gamified sessions bring families, schools and clubs back between the busy slots, and give your staff new tools to teach.',
      ['Swim lessons built with national swimming coaches', 'Themed family sessions at weekends and holidays', 'A paid add-on to the standard ticket', 'Rehabilitation and senior programmes']),
-    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-dubai.webp', 'Pool-On unit on the edge of a hotel pool in Dubai',
+    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-dubai.webp', 'Pool-On unit on the edge of a hotel rooftop pool',
      'Evening shows, kids\' clubs and a visual signature for the pool area that guests share on social media.',
      ['Lagoon, space and art gallery scenes', 'Kids\' club programmes', 'Night shows for the bar and terrace', 'Your own branded content']),
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
      'Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.',
      ['Avatar-led workouts', 'Timed training sets in each lane', 'Group programmes updated over time']),
-    ('events', 'Events · MICE', 'Rent the pool as a stage', 'lacoste-multivp.webp', 'SCAD Lacoste Film Festival logo projected into a pool at night with several Pool-On units',
+    ('events', 'Events · MICE', 'Rent the pool as a stage', 'event.webp', 'Pool-On unit set up at an evening garden party',
      'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several units can run together.',
      ['Team challenges', 'Sponsored broadcasts', 'Multi-unit shows for large pools', 'Live or recorded content']),
 ]
@@ -275,7 +275,6 @@ def build():
       <div><b>0.80–2.00 m</b><small>Pool depth range covered</small></div>
       <div><b>18 kg</b><small>Mobile unit, universal edge mount</small></div>
       <div><b>24 / 7</b><small>Low voltage, rated for continuous use</small></div>
-      <div><b><span class="todo">≈10</span> pools</b><small>Already equipped <span class="todo">à confirmer</span></small></div>
     </div>
   </div>
 
@@ -339,9 +338,9 @@ def build():
         <h2 id="ref-title">Already in the water</h2>
       </div>
       <div class="refs">
-        <article class="ref"><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a rooftop hotel pool in Dubai" loading="lazy" style="object-position:50% 70%"><div class="body"><b>Address Creek Harbour, Dubai</b><small>Hotel roadshow · March 2025 <span class="todo">nom publiable ?</span></small></div></article>
-        <article class="ref"><img src="assets/lacoste-multivp.webp" alt="SCAD Lacoste Film Festival logo projected into a pool at night" loading="lazy"><div class="body"><b>SCAD Lacoste Film Festival</b><small>Multi-unit show with Dushow · June 2025 <span class="todo">nom publiable ?</span></small></div></article>
-        <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · April 2025 <span class="todo">nom du club à fournir</span></small></div></article>
+        <article class="ref"><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a hotel rooftop pool" loading="lazy" style="object-position:50% 70%"><div class="body"><b>Luxury hotel</b><small>Rooftop pool show · 2025</small></div></article>
+        <article class="ref"><img src="assets/event.webp" alt="Pool-On unit set up at an evening garden party" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-unit night show · 2025</small></div></article>
+        <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · 2025</small></div></article>
       </div>
       <a class="more" href="references.html">All references and press →</a>
 {partners()}
@@ -484,20 +483,20 @@ def build():
     <div class="wrap">
       <div class="stack">
         <article class="split">
-          <img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into the pool of Address Creek Harbour at night" loading="lazy">
-          <div class="txt"><span class="eyebrow">Hotel · Dubai · March 2025</span><h2>Address Creek Harbour</h2><p>A night-time Van Gogh show in the hotel pool during the Dubai roadshow. <span class="todo">nom publiable ?</span></p></div>
+          <img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a hotel pool at night" loading="lazy">
+          <div class="txt"><span class="eyebrow">Hotel · 2025</span><h2>Luxury hotel</h2><p>A night-time Van Gogh show in the hotel pool, for guests and partners.</p></div>
         </article>
         <article class="split rev">
-          <img src="assets/lacoste-multivp.webp" alt="SCAD Lacoste Film Festival logo projected into a pool with several units" loading="lazy">
-          <div class="txt"><span class="eyebrow">Event · Lacoste · June 2025</span><h2>SCAD Lacoste Film Festival</h2><p>A multi-unit show produced with Dushow: festival branding and content projected across the pool. <span class="todo">nom publiable ?</span></p></div>
+          <img src="assets/fish.webp" alt="Fish projected into a pool at night" loading="lazy">
+          <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A multi-unit night show: festival branding and content projected across the pool.</p></div>
         </article>
         <article class="split">
           <img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer" loading="lazy">
-          <div class="txt"><span class="eyebrow">Swim club · April 2025</span><h2>Swim lesson trial</h2><p>Coaches tested avatar pacers and projected drills with club swimmers. <span class="todo">nom du club à fournir</span></p></div>
+          <div class="txt"><span class="eyebrow">Swim club · 2025</span><h2>Swim lesson trial</h2><p>Coaches tested avatar pacers and projected drills with club swimmers.</p></div>
         </article>
       </div>
       <div class="shots">
-        <figure><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a rooftop hotel pool in Dubai" loading="lazy"><figcaption>Dubai roadshow · 2025</figcaption></figure>
+        <figure><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a hotel rooftop pool" loading="lazy"><figcaption>Hotel roadshow · 2025</figcaption></figure>
         <figure><img src="assets/event.webp" alt="Pool-On unit set up at an evening garden party" loading="lazy"><figcaption>Evening event · 2025</figcaption></figure>
         <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
       </div>
