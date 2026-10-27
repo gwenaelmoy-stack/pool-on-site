@@ -355,7 +355,7 @@ def build():
     </div>
   </section>
 {cta()}'''
-    page('index.html', 'Pool-On', 'Pool-On turns any pool into a new playground with underwater video projection: games, swim lessons, workouts and events.', 'index.html', home, standalone=False)
+    page('index.html', 'Pool-On · Underwater projection that turns your pool into a playground', 'Pool-On turns any pool into a new playground with underwater video projection: games, swim lessons, workouts and events.', 'index.html', home, standalone=False)
 
     # ---------- Solutions ----------
     rows = []

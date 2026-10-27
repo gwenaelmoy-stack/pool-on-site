@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Files for the production site, built after i18n.py: 404 page, robots.txt and sitemap.xml."""
-import os, re
+"""Files for the production site, built after i18n.py: 404 page, SEO tags, robots.txt, sitemap.xml and llms.txt."""
+import os, re, json, html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(os.path.dirname(HERE), 'site')
@@ -50,5 +50,86 @@ def robots_and_sitemap():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
         + '\n'.join(urls) + '\n</urlset>\n')
 
+SOCIAL = ['https://www.instagram.com/pool_on_experience/', 'https://www.linkedin.com/company/pool-on',
+          'https://www.youtube.com/@pool-on2405']
+
+def url(page, lang):
+    if page == 'index':
+        return DOMAIN + ('/fr/' if lang == 'fr' else '/')
+    return DOMAIN + ('/fr/' if lang == 'fr' else '/') + page + '.html'
+
+def structured_data(lang):
+    desc = {'en': 'Mobile underwater video projector for swimming pools: games, swim lessons, workouts and events.',
+            'fr': 'Vidéoprojecteur subaquatique mobile pour piscines : jeux, cours de natation, entraînements et événements.'}[lang]
+    org = {'@type': 'Organization', '@id': DOMAIN + '/#org', 'name': 'Pool-On', 'legalName': 'SAS Pool-On',
+           'url': DOMAIN + '/', 'logo': DOMAIN + '/assets/logo-full-color.png', 'email': 'contact@pool-on.com',
+           'slogan': 'Unlimited Emotions', 'vatID': 'FR75909766222', 'taxID': '909766222',
+           'address': {'@type': 'PostalAddress', 'streetAddress': '943 voie Antiope', 'postalCode': '13600',
+                       'addressLocality': 'La Ciotat', 'addressCountry': 'FR'},
+           'sameAs': SOCIAL}
+    product = {'@type': 'Product', 'name': 'Pool-On PO-1.1', 'description': desc,
+               'brand': {'@id': DOMAIN + '/#org'}, 'manufacturer': {'@id': DOMAIN + '/#org'},
+               'image': DOMAIN + '/assets/unit-beam.webp', 'url': url('technology', lang)}
+    site = {'@type': 'WebSite', '@id': DOMAIN + '/#site', 'name': 'Pool-On', 'url': DOMAIN + '/',
+            'inLanguage': ['en', 'fr'], 'publisher': {'@id': DOMAIN + '/#org'}}
+    data = {'@context': 'https://schema.org', '@graph': [org, site, product]}
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>\n'
+
+def seo():
+    # Absolute alternates, canonical and share previews on every page, both languages.
+    for lang in ('en', 'fr'):
+        for p in PAGES:
+            f = os.path.join(SITE, 'fr' if lang == 'fr' else '', p + '.html')
+            h = open(f).read()
+            h = re.sub(r'<link rel="alternate" hreflang="[a-z]+" href="[^"]*">\n', '', h)
+            title = html.unescape(re.search(r'<title>(.*?)</title>', h).group(1))
+            desc = html.unescape(re.search(r'<meta name="description" content="([^"]*)"', h).group(1))
+            esc = lambda v: html.escape(v, quote=True)
+            tags = [
+                '<link rel="canonical" href="%s">' % url(p, lang),
+                '<link rel="alternate" hreflang="en" href="%s">' % url(p, 'en'),
+                '<link rel="alternate" hreflang="fr" href="%s">' % url(p, 'fr'),
+                '<link rel="alternate" hreflang="x-default" href="%s">' % url(p, 'en'),
+                '<meta property="og:type" content="website">',
+                '<meta property="og:site_name" content="Pool-On">',
+                '<meta property="og:locale" content="%s">' % ('fr_FR' if lang == 'fr' else 'en_GB'),
+                '<meta property="og:title" content="%s">' % esc(title),
+                '<meta property="og:description" content="%s">' % esc(desc),
+                '<meta property="og:url" content="%s">' % url(p, lang),
+                '<meta property="og:image" content="%s/assets/og-image.jpg">' % DOMAIN,
+                '<meta name="twitter:card" content="summary_large_image">',
+            ]
+            block = '\n'.join(tags) + '\n' + (structured_data(lang) if p == 'index' else '')
+            h = h.replace('</head>', block + '</head>', 1)
+            open(f, 'w').write(h)
+
+def llms():
+    open(os.path.join(SITE, 'llms.txt'), 'w').write("""# Pool-On
+
+> Pool-On (SAS Pool-On, La Ciotat, France) makes the PO-1.1, a mobile underwater video projector that sits on the edge of a swimming pool and turns the water into a screen, to play, learn, work out, recover and relax. Patented system, laser projection technology by Optoma. POOL-ON is a registered EU trademark.
+
+## Who it is for
+- Public pools and aquatic centres: swim lessons, aquagym, events that bring people back to the water.
+- Hotels, resorts and campsites: night shows and family entertainment around the pool.
+- Fitness clubs and swim schools: pacers, timed workouts and coaching content on the pool floor.
+- Event agencies: brand content and shows projected into the pool.
+
+## Key facts
+- Pool depth covered: 0.80 to 2.00 m.
+- Weight: 18 kg, mobile, universal edge mount.
+- Low voltage, rated for continuous 24/7 use; brightness 5,000 lm; Full HD.
+- Content platform with games, immersive scenes, lessons and workouts, launched from a tablet or smartphone app; customers can add their own videos and logos.
+
+## Pages
+- [Solutions](%(d)s/solutions.html): uses by type of venue.
+- [Content](%(d)s/content.html): the six ways to use the water, with videos.
+- [Technology](%(d)s/technology.html): specifications and intellectual property.
+- [References](%(d)s/references.html): installations, events and press.
+- [Contact](%(d)s/contact.html): book a demo in your pool. Email: contact@pool-on.com.
+- French version: %(d)s/fr/
+""" % {'d': DOMAIN})
+
 not_found()
+seo()
 robots_and_sitemap()
+llms()
