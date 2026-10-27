@@ -180,6 +180,12 @@ FR = {
 "Brand activations and launches": "Activations de marque et lancements",
 "Videos": "Vidéos",
 "See it in the water": "À voir dans l'eau",
+"For every kind of swimmer": "Pour tous les types de nageurs",
+"Balance and propulsion at any age": "Équilibre et propulsion à tout âge",
+"The art of making people swim more": "L’art de motiver à nager plus",
+"Kids more at ease in the water": "Des enfants plus à l’aise dans l’eau",
+"As seen on M6, 12.45 news": "Vu au 12.45 de M6",
+"France 3 Provence-Alpes-Côte d’Azur report": "Reportage France 3 Provence-Alpes-Côte d’Azur",
 "Videos load from YouTube only when you press play.": "Les vidéos se chargent depuis YouTube seulement quand vous appuyez sur lecture.",
 "All videos on our YouTube channel →": "Toutes les vidéos sur notre chaîne YouTube →",
 "Try the content in your pool": "Testez les contenus dans votre piscine",
@@ -301,6 +307,12 @@ FR = {
 "Information sent through the contact form is used only to answer your request and manage the commercial relationship. It is kept for no longer than three years after our last contact. You can ask to access, correct or delete your data by writing to contact@pool-on.com. You can also file a complaint with the CNIL.": "Les informations envoyées via le formulaire servent uniquement à répondre à votre demande et à gérer la relation commerciale. Elles sont conservées au maximum trois ans après notre dernier échange. Vous pouvez demander à y accéder, à les rectifier ou à les supprimer en écrivant à contact@pool-on.com. Vous pouvez aussi saisir la CNIL.",
 "This site sets no advertising or tracking cookies. YouTube videos load only after you press play.": "Ce site ne dépose aucun cookie publicitaire ni de suivi. Les vidéos YouTube ne se chargent qu'après un clic sur lecture.",
 }
+FR["▶ For every kind of swimmer"] = "▶ " + FR["For every kind of swimmer"]
+FR["▶ Balance and propulsion at any age"] = "▶ " + FR["Balance and propulsion at any age"]
+FR["▶ The art of making people swim more"] = "▶ " + FR["The art of making people swim more"]
+FR["▶ Kids more at ease in the water"] = "▶ " + FR["Kids more at ease in the water"]
+FR["▶ As seen on M6, 12.45 news"] = "▶ " + FR["As seen on M6, 12.45 news"]
+FR["▶ France 3 Provence-Alpes-Côte d’Azur report"] = "▶ " + FR["France 3 Provence-Alpes-Côte d’Azur report"]
 for i in range(1, 7):
     FR[f"Pool-On video {i}"] = f"Vidéo Pool-On {i}"
     FR[f"▶ Play video {i}"] = f"▶ Lire la vidéo {i}"

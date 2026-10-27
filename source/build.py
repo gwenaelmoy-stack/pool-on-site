@@ -49,8 +49,9 @@ nav.main a[aria-current="page"] { color: var(--fg); text-decoration: underline; 
 .yt { position: relative; aspect-ratio: 16 / 9; border: 1px solid var(--line); background: #000; overflow: hidden; }
 .yt button { all: unset; cursor: pointer; position: absolute; inset: 0; display: grid; place-items: center; }
 .yt button img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .75; }
-.yt button span { position: relative; background: var(--lumen); color: var(--on-lumen); font-weight: 700; padding: .6rem 1rem; border-radius: 4px; }
-.yt button:focus-visible span { outline: 3px solid var(--fg); outline-offset: 3px; }
+.yt button::before { content: '▶'; position: relative; z-index: 1; display: grid; place-items: center; width: 3.4rem; height: 3.4rem; border-radius: 50%; background: var(--lumen); color: var(--on-lumen); font-size: 1.1rem; padding-left: .2rem; box-sizing: border-box; }
+.yt button span { position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .8rem; background: linear-gradient(transparent, rgba(0, 0, 0, .85)); color: #fff; font-weight: 700; line-height: 1.3; }
+.yt button:focus-visible::before { outline: 3px solid #fff; outline-offset: 3px; }
 .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .legal { display: grid; gap: 2rem; max-width: 48rem; }
 .legal section { display: grid; gap: .6rem; }
@@ -386,9 +387,13 @@ def build():
         <img src="assets/{img}" alt="{alt}" loading="lazy">
         <div class="txt"><span class="eyebrow">0{i+1} · {t}</span><h2>{t}</h2><p class="tagline">{tl}</p><p>{txt}</p><ul>{lis}</ul></div>
       </article>''')
-    vids = [('WRbjczqsS3s', 'swimmer-reef.webp'), ('z55A_94QFq4', 'kid-ocean.webp'), ('EmmPKbM0njA', 'aquagym.webp'),
-            ('5GvZ9gLcAc8', 'mountain.webp'), ('QUObB2R9hnM', 'vangogh-kids.webp'), ('TDs6DKlaLJk', 'lesson-kids.webp')]
-    vhtml = '\n'.join(f'''        <div class="yt"><button type="button" data-id="{v}" data-title="Pool-On video {n+1}"><img src="assets/{p}" alt="" loading="lazy"><span>▶ Play video {n+1}</span></button></div>''' for n, (v, p) in enumerate(vids))
+    vids = [('WRbjczqsS3s', 'swimmer-reef.webp', 'For every kind of swimmer'),
+            ('z55A_94QFq4', 'kid-ocean.webp', 'Balance and propulsion at any age'),
+            ('EmmPKbM0njA', 'aquagym.webp', 'The art of making people swim more'),
+            ('5GvZ9gLcAc8', 'lesson-kids.webp', 'Kids more at ease in the water'),
+            ('QUObB2R9hnM', 'vangogh-kids.webp', 'As seen on M6, 12.45 news'),
+            ('TDs6DKlaLJk', 'mountain.webp', 'France 3 Provence-Alpes-Côte d’Azur report')]
+    vhtml = '\n'.join(f'''        <div class="yt"><button type="button" data-id="{v}" data-title="{t}"><img src="assets/{p}" alt="" loading="lazy"><span>{t}</span></button></div>''' for v, p, t in vids)
     cont = phero('mountain.webp', 'Content platform', 'An <em>augmented playfield</em>', 'Six ways to use the water, from a family lagoon to a timed workout. New content is added over time and launched from the app.', '50% 40%') + f'''
   <section class="block">
     <div class="wrap">
@@ -408,7 +413,7 @@ def build():
       <div class="head">
         <span class="eyebrow">Videos</span>
         <h2 id="vid-title">See it in the water</h2>
-        <p>Videos load from YouTube only when you press play. <span class="todo">titres des vidéos à fournir</span></p>
+        <p>Videos load from YouTube only when you press play.</p>
       </div>
       <div class="videos">
 {vhtml}
