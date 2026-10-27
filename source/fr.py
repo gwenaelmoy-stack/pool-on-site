@@ -199,6 +199,7 @@ FR = {
 "Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen": "Des boîtiers Pool-On projettent de nuit les contenus du festival dans une piscine, face à un écran de cinéma en plein air",
 "A Van Gogh painting projected into a pool at night": "Un tableau de Van Gogh projeté de nuit dans une piscine",
 "Van Gogh night show · 2025": "Soirée Van Gogh · 2025",
+"PO-1.1 on the pool edge": "Le PO-1.1 sur la margelle",
 "Videos load from YouTube only when you press play.": "Les vidéos se chargent depuis YouTube seulement quand vous appuyez sur lecture.",
 "All videos on our YouTube channel →": "Toutes les vidéos sur notre chaîne YouTube →",
 "Try the content in your pool": "Testez les contenus dans votre piscine",

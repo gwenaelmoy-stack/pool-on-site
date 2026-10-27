@@ -239,7 +239,7 @@ MARKETS = [
     ('public', 'Public pools · aquatic centres', 'Fill the off-peak hours', 'coach.webp', 'A coach runs a projected swim lesson from a tablet at the pool edge',
      'Gamified sessions bring families, schools and clubs back between the busy slots, and give your staff new tools to teach.',
      ['Swim lessons built with national swimming coaches', 'Themed family sessions at weekends and holidays', 'A paid add-on to the standard ticket', 'Rehabilitation and senior programmes']),
-    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-dubai.webp', 'Pool-On unit on the edge of a hotel rooftop pool',
+    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-event.webp', 'Guests dining around a hotel pool at night while a Pool-On unit projects images under the water',
      'Evening shows, kids\' clubs and a visual signature for the pool area that guests share on social media.',
      ['Lagoon, space and art gallery scenes', 'Kids\' club programmes', 'Night shows for the bar and terrace', 'Your own branded content']),
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
@@ -508,7 +508,7 @@ def build():
         </article>
       </div>
       <div class="shots">
-        <figure><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a hotel rooftop pool" loading="lazy"><figcaption>Hotel roadshow · 2025</figcaption></figure>
+        <figure><img src="assets/unit-beam.webp" alt="Pool-On unit clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.1 on the pool edge</figcaption></figure>
         <figure><img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a pool at night" loading="lazy"><figcaption>Van Gogh night show · 2025</figcaption></figure>
         <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
       </div>
