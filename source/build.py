@@ -443,8 +443,7 @@ def build():
       </div>
       <a class="more" href="https://www.youtube.com/@pool-on2405">All videos on our YouTube channel →</a>
     </div>
-  </section>
-{cta('Try the content in your pool', 'We bring a projector and run a session with your team.')}'''
+  </section>'''
     page('content.html', 'Content · Pool-On', 'The Pool-On content platform: explore, learn, work out, coach groups, entertain and broadcast your own content.', 'content.html', cont)
 
     # ---------- Technology ----------
@@ -544,7 +543,7 @@ def build():
 {partners()}
     </div>
   </section>
-''' + cta('Your pool could be next')
+'''
     page('references.html', 'References · Pool-On', 'Pool-On references: hotels, events and swimming pools, plus news and partners.', 'references.html', refs)
 
     # ---------- Contact ----------
