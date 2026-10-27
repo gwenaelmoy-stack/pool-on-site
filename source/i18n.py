@@ -78,7 +78,8 @@ def main():
         open(os.path.join(SITE, 'fr', page + '.html'), 'w').write(fr_page(en, page))
         open(p, 'w').write(en_page(en, page, False))
     frag_p = os.path.join(HERE, 'artifact-index.html')
-    open(frag_p, 'w').write(en_page(open(frag_p).read(), 'index', True))
+    frag = en_page(open(frag_p).read(), 'index', True)
+    open(frag_p, 'w').write(frag)
     # report untranslated visible text on FR pages
     left = set()
     for page in PAGES:
