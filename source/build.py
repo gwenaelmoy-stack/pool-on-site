@@ -17,6 +17,11 @@ header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 
 .cta-band { position: relative; }
 .cta-band::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--brand-grad); }
 .cta-band .cta-logo { height: 3.2rem; width: auto; }
+.split .unit-video { aspect-ratio: 1; object-fit: contain; }
+/* home: let the film show through behind the text */
+.hero-yt::after { background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 82%, transparent) 0%, color-mix(in srgb, var(--bg) 55%, transparent) 38%, color-mix(in srgb, var(--bg) 10%, transparent) 70%, transparent 100%); }
+@media (max-width: 760px) { .hero-yt::after { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 30%, transparent), color-mix(in srgb, var(--bg) 75%, transparent) 85%); } }
+.hero-yt h1, .hero-yt .lede, .hero-yt .eyebrow { text-shadow: 0 2px 18px color-mix(in srgb, var(--bg) 70%, transparent); }
 nav.main a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-decoration-color: var(--lumen); text-underline-offset: .45em; text-decoration-thickness: 2px; }
 .page-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
 .page-hero .bgimg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
