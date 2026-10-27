@@ -245,7 +245,7 @@ MARKETS = [
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
      'Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.',
      ['Avatar-led workouts', 'Timed training sets in each lane', 'Group programmes updated over time']),
-    ('events', 'Events · MICE', 'Rent the pool as a stage', 'event.webp', 'Pool-On unit set up at an evening garden party',
+    ('events', 'Events · MICE', 'Rent the pool as a stage', 'festival-night.webp', 'Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen',
      'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several units can run together.',
      ['Team challenges', 'Sponsored broadcasts', 'Multi-unit shows for large pools', 'Live or recorded content']),
 ]
@@ -347,7 +347,7 @@ def build():
       </div>
       <div class="refs">
         <article class="ref"><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On unit projects images under the water" loading="lazy"><div class="body"><b>Hotel event</b><small>Evening dinner around the pool</small></div></article>
-        <article class="ref"><img src="assets/event.webp" alt="Pool-On unit set up at an evening garden party" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-unit night show · 2025</small></div></article>
+        <article class="ref"><img src="assets/festival-night.webp" alt="Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-unit night show · 2025</small></div></article>
         <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · 2025</small></div></article>
       </div>
       <a class="more" href="references.html">All references and press →</a>
@@ -499,7 +499,7 @@ def build():
           <div class="txt"><span class="eyebrow">Hotel · Event</span><h2>Hotel event</h2><p>An evening dinner around the hotel pool: the Pool-On unit sits on the edge and turns the water into a screen for the guests.</p></div>
         </article>
         <article class="split rev">
-          <img src="assets/fish.webp" alt="Fish projected into a pool at night" loading="lazy">
+          <img src="assets/festival-night.webp" alt="Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy">
           <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A multi-unit night show: festival branding and content projected across the pool.</p></div>
         </article>
         <article class="split">
@@ -509,7 +509,7 @@ def build():
       </div>
       <div class="shots">
         <figure><img src="assets/hotel-dubai.webp" alt="Pool-On unit on a hotel rooftop pool" loading="lazy"><figcaption>Hotel roadshow · 2025</figcaption></figure>
-        <figure><img src="assets/event.webp" alt="Pool-On unit set up at an evening garden party" loading="lazy"><figcaption>Evening event · 2025</figcaption></figure>
+        <figure><img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a pool at night" loading="lazy"><figcaption>Van Gogh night show · 2025</figcaption></figure>
         <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
       </div>
     </div>
@@ -529,7 +529,7 @@ def build():
     page('references.html', 'References · Pool-On', 'Pool-On references: hotels, events and swimming pools, plus news and partners.', 'references.html', refs)
 
     # ---------- Contact ----------
-    contact = phero('event.webp', 'Contact', 'See it in <em>your pool</em>', 'Tell us about your pool. We can bring a unit for a live demo on site.') + '''
+    contact = phero('festival-night.webp', 'Contact', 'See it in <em>your pool</em>', 'Tell us about your pool. We can bring a unit for a live demo on site.') + '''
   <section class="block" aria-labelledby="contact-title">
     <div class="wrap contact">
       <div>
