@@ -196,7 +196,7 @@ def page(fname, title, desc, cur, body, standalone=True):
         html = '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n' + head + '</head>\n<body>\n' + html + '</body>\n</html>\n'
     open(os.path.join(OUT, fname), 'w').write(html)
 
-def cta(title='See it in your pool', text='We bring a unit to your pool for a live demo.'):
+def cta(title='See it in your pool', text='We bring a projector to your pool for a live demo.'):
     return f'''
   <div class="cta-band"><div class="wrap">
     <img class="cta-logo logo-w" src="assets/logo-white.png" alt="" width="480" height="119"><img class="cta-logo logo-c" src="assets/logo-color.png" alt="" width="480" height="124">
@@ -229,13 +229,13 @@ def partners():
       </div>'''
 
 MODES = [
-    ('enjoy', 'Enjoy', 'fish.webp', 'A projected tropical fish on the pool floor', 'Share the pool',
+    ('explore', 'Explore', 'fish.webp', 'A projected tropical fish on the pool floor', 'Explore new worlds',
      'Games and immersive scenes for everyone in the water: explore a lagoon, swim through outer space or visit an art gallery.',
      ['Lagoon, ocean and space scenes', 'Art gallery series, from Van Gogh to street art', 'Family games for all ages']),
     ('learn', 'Learn', 'lesson-kids.webp', 'Children at the pool edge ready for a projected swim lesson', 'Learning has never been that fun!',
      'Gamified swim lessons, designed with national swimming coaches, that build water confidence step by step.',
      ['Progressive lessons for schools and swim schools', 'Water-confidence games for beginners', 'Content built with national coaches']),
-    ('workout', 'Work out', 'timer.webp', 'A projected race timer on a pool lane, next to the Pool-On unit', 'Push your limits with our avatars!',
+    ('workout', 'Work out', 'timer.webp', 'A projected race timer on a pool lane, next to the Pool-On projector', 'Push your limits with our avatars!',
      'Immersive workouts: follow an avatar pacer, take on challenges and race the clock projected in your lane.',
      ['Avatar pacers per lane', 'Timed sets and challenges', 'Projected race timer']),
     ('coach', 'Coach groups', 'aquabike.webp', 'An aquabike class over a projected workout grid', 'Upgrade your aquatic fitness activities!',
@@ -251,17 +251,17 @@ MODES = [
 
 MARKETS = [
     ('public', 'Public pools · aquatic centres', 'Fill the off-peak hours', 'coach.webp', 'A coach runs a projected swim lesson from a tablet at the pool edge',
-     'Gamified sessions bring families, schools and clubs back between the busy slots, and give your staff new tools to teach.',
+     'Gamified sessions increase attendance by drawing families, schools and clubs in between the busy slots, and give your staff new tools to teach.',
      ['Swim lessons built with national swimming coaches', 'Themed family sessions at weekends and holidays', 'A paid add-on to the standard ticket', 'Rehabilitation and senior programmes']),
-    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-event.webp', 'Guests dining around a hotel pool at night while a Pool-On unit projects images under the water',
+    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-event.webp', 'Guests dining around a hotel pool at night while a Pool-On projector projects images under the water',
      'Evening shows, kids\' clubs and a visual signature for the pool area that guests share on social media.',
      ['Lagoon, space and art gallery scenes', 'Kids\' club programmes', 'Night shows for the bar and terrace', 'Your own branded content']),
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
      'Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.',
      ['Avatar-led workouts', 'Timed training sets in each lane', 'Group programmes updated over time']),
-    ('events', 'Events · MICE', 'Rent the pool as a stage', 'festival-night.webp', 'Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen',
-     'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several units can run together.',
-     ['Team challenges', 'Sponsored broadcasts', 'Multi-unit shows for large pools', 'Live or recorded content']),
+    ('events', 'Events · MICE', 'Rent the pool as a stage', 'festival-night.webp', 'Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen',
+     'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several projectors can run together.',
+     ['Team challenges', 'Sponsored broadcasts', 'Multi-projector shows for large pools', 'Live or recorded content']),
 ]
 
 def build():
@@ -296,14 +296,14 @@ def build():
   <div class="proof">
     <div class="wrap">
       <div><b>0.80–2.00 m</b><small>Pool depth range covered</small></div>
-      <div><b>18 kg</b><small>Mobile unit, universal edge mount</small></div>
+      <div><b>18 kg</b><small>Mobile projector, universal edge mount</small></div>
       <div><b>24 / 7</b><small>Low voltage, rated for continuous use</small></div>
     </div>
   </div>
 
   <section class="block" aria-labelledby="intro-title">
     <div class="wrap split">
-      <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 unit turning, with the Pool-On logo"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
+      <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 projector turning, with the Pool-On logo"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
       <div class="txt">
         <span class="eyebrow">The new PO-1.2</span>
         <h2 id="intro-title">Live never-seen-before experiences</h2>
@@ -320,7 +320,7 @@ def build():
         <h2 id="benef-title">Reveal the full potential of your pool</h2>
       </div>
       <div class="benefits">
-        <div class="benefit"><h3>Never seen before</h3><p>Unique experiences that bring visitors back, raise average spend and renew the appeal of the pool for users and staff.</p></div>
+        <div class="benefit"><h3>Never seen before</h3><p>Unique experiences that increase attendance, raise average spend and renew the appeal of the pool for users and staff.</p></div>
         <div class="benefit"><h3>For all</h3><p>Suited to every age and purpose: water confidence, health, training and leisure. Accessible to everyone.</p></div>
         <div class="benefit"><h3>Easy to set up &amp; use</h3><p>Non-invasive. A universal fastening system on the pool edge, and everything runs from the mobile app.</p></div>
       </div>
@@ -332,7 +332,7 @@ def build():
       <div class="head">
         <span class="eyebrow">Solutions</span>
         <h2 id="sol-title">More visits, longer sessions, new revenue</h2>
-        <p>One unit turns an ordinary pool into a venue people come back to. Each market uses it differently.</p>
+        <p>One projector turns an ordinary pool into a venue that draws more visitors. Each market uses it differently.</p>
       </div>
       <div class="teasers">
 {teasers}
@@ -345,7 +345,7 @@ def build():
       <div class="head">
         <span class="eyebrow">Content platform</span>
         <h2 id="content-title">Turn your pool into an augmented playfield</h2>
-        <p>Every unit comes with a content library, updated over time and launched from the app.</p>
+        <p>Every projector comes with a content library, updated over time and launched from the app.</p>
       </div>
       <div class="modes">
 {modes}
@@ -361,8 +361,8 @@ def build():
         <h2 id="ref-title">Already in the water</h2>
       </div>
       <div class="refs">
-        <article class="ref"><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On unit projects images under the water" loading="lazy"><div class="body"><b>Hotel event</b><small>Evening dinner around the pool</small></div></article>
-        <article class="ref"><img src="assets/festival-night.webp" alt="Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-unit night show · 2025</small></div></article>
+        <article class="ref"><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On projector projects images under the water" loading="lazy"><div class="body"><b>Hotel event</b><small>Evening dinner around the pool</small></div></article>
+        <article class="ref"><img src="assets/festival-night.webp" alt="Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-projector night show · 2025</small></div></article>
         <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · 2025</small></div></article>
       </div>
       <a class="more" href="references.html">All references and press →</a>
@@ -380,7 +380,7 @@ def build():
         <img src="assets/{img}" alt="{alt}" loading="lazy">
         <div class="txt"><span class="eyebrow">{tag}</span><h2>{h}</h2><p>{txt}</p><ul>{lis}</ul></div>
       </article>''')
-    sol = phero('beam.webp', 'Solutions', 'One pool, <em>many new uses</em>', 'Public pools, hotels, fitness clubs and event agencies use Pool-On to bring people back to the water.') + f'''
+    sol = phero('beam.webp', 'Solutions', 'One pool, <em>many new uses</em>', 'Public pools, hotels, fitness clubs and event agencies use Pool-On to increase attendance and create new uses for the water.') + f'''
   <section class="block">
     <div class="wrap stack">
 {chr(10).join(rows)}
@@ -389,11 +389,11 @@ def build():
 
   <section class="block" aria-labelledby="dist-title">
     <div class="wrap split">
-      <img src="assets/unit-beam.webp" alt="Pool-On unit clamped on the edge of a tiled pool" loading="lazy">
+      <img src="assets/unit-beam.webp" alt="Pool-On projector clamped on the edge of a tiled pool" loading="lazy">
       <div class="txt">
         <span class="eyebrow">Distributors · pool builders</span>
         <h2 id="dist-title">Add Pool-On to your offer</h2>
-        <p>We work with pool builders, AV integrators and distributors in France and abroad. Ask for the partner kit: pricing, demo unit and sales material.</p>
+        <p>We work with pool builders, AV integrators and distributors in France and abroad. Ask for the partner kit: pricing, demo projector and sales material.</p>
         <a class="more" href="contact.html">Ask for the partner kit →</a>
       </div>
     </div>
@@ -420,7 +420,7 @@ def build():
   <section class="block">
     <div class="wrap">
       <div class="shots">
-        <figure><img src="assets/turtle.webp" alt="A sea turtle scene projected onto the floor of an indoor pool" loading="lazy"><figcaption>Enjoy · ocean scene, indoor pool</figcaption></figure>
+        <figure><img src="assets/turtle.webp" alt="A sea turtle scene projected onto the floor of an indoor pool" loading="lazy"><figcaption>Explore · ocean scene, indoor pool</figcaption></figure>
         <figure><img src="assets/kid-ocean.webp" alt="A child swims over a projected seabed with starfish" loading="lazy"><figcaption>Learn · treasure hunt</figcaption></figure>
         <figure><img src="assets/swimmer-reef.webp" alt="A swimmer glides over a projected coral reef" loading="lazy"><figcaption>Swim · coral reef</figcaption></figure>
       </div>
@@ -443,8 +443,8 @@ def build():
       <a class="more" href="https://www.youtube.com/@pool-on2405">All videos on our YouTube channel →</a>
     </div>
   </section>
-{cta('Try the content in your pool', 'We bring a unit and run a session with your team.')}'''
-    page('content.html', 'Content · Pool-On', 'The Pool-On content platform: enjoy, learn, work out, coach groups, entertain and broadcast your own content.', 'content.html', cont)
+{cta('Try the content in your pool', 'We bring a projector and run a session with your team.')}'''
+    page('content.html', 'Content · Pool-On', 'The Pool-On content platform: explore, learn, work out, coach groups, entertain and broadcast your own content.', 'content.html', cont)
 
     # ---------- Technology ----------
     tech = phero('unit-beam.webp', 'Technology', 'Built for <em>chlorinated water</em> and daily use', 'A patented, mobile underwater projection system with an Optoma laser engine, rated for continuous use.', '50% 60%') + '''
@@ -452,7 +452,7 @@ def build():
     <div class="wrap">
       <div class="head"><span class="eyebrow">PO-1.2</span><h2 id="spec-title">Specifications</h2></div>
       <div class="tech">
-        <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 unit turning"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
+        <video class="unit-video" autoplay muted loop playsinline poster="assets/po11-branded-poster.webp" aria-label="The Pool-On PO-1.2 projector turning"><source src="assets/po11-branded.webm" type="video/webm"><source src="assets/po11-branded.mp4" type="video/mp4"></video>
         <div>
           <table class="specs">
             <tbody>
@@ -483,8 +483,8 @@ def build():
         <li><h3>Play</h3><p>Pick a programme in the app and the show starts on the bottom of the pool.</p></li>
       </ol>
       <figure class="setup">
-        <img src="assets/timer.webp" alt="Pool-On unit on the edge of a lane, projecting a race timer" loading="lazy">
-        <figcaption><strong>On the pool edge, ready in minutes.</strong> One unit covers a lane or a play area.</figcaption>
+        <img src="assets/timer.webp" alt="Pool-On projector on the edge of a lane, projecting a race timer" loading="lazy">
+        <figcaption><strong>On the pool edge, ready in minutes.</strong> One projector covers a lane or a play area.</figcaption>
       </figure>
     </div>
   </section>
@@ -510,12 +510,12 @@ def build():
     <div class="wrap">
       <div class="stack">
         <article class="split">
-          <img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On unit projects images under the water" loading="lazy">
-          <div class="txt"><span class="eyebrow">Hotel · Event</span><h2>Hotel event</h2><p>An evening dinner around the hotel pool: the Pool-On unit sits on the edge and turns the water into a screen for the guests.</p></div>
+          <img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On projector projects images under the water" loading="lazy">
+          <div class="txt"><span class="eyebrow">Hotel · Event</span><h2>Hotel event</h2><p>An evening dinner around the hotel pool: the Pool-On projector sits on the edge and turns the water into a screen for the guests.</p></div>
         </article>
         <article class="split rev">
-          <img src="assets/festival-night.webp" alt="Pool-On units projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy">
-          <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A multi-unit night show: festival branding and content projected across the pool.</p></div>
+          <img src="assets/festival-night.webp" alt="Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy">
+          <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A multi-projector night show: festival branding and content projected across the pool.</p></div>
         </article>
         <article class="split">
           <img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer" loading="lazy">
@@ -523,7 +523,7 @@ def build():
         </article>
       </div>
       <div class="shots">
-        <figure><img src="assets/unit-beam.webp" alt="Pool-On unit clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.2 on the pool edge</figcaption></figure>
+        <figure><img src="assets/unit-beam.webp" alt="Pool-On projector clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.2 on the pool edge</figcaption></figure>
         <figure><img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a pool at night" loading="lazy"><figcaption>Van Gogh night show · 2025</figcaption></figure>
         <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
       </div>
@@ -547,7 +547,7 @@ def build():
     page('references.html', 'References · Pool-On', 'Pool-On references: hotels, events and swimming pools, plus news and partners.', 'references.html', refs)
 
     # ---------- Contact ----------
-    contact = phero('festival-night.webp', 'Contact', 'See it in <em>your pool</em>', 'Tell us about your pool. We can bring a unit for a live demo on site.') + '''
+    contact = phero('festival-night.webp', 'Contact', 'See it in <em>your pool</em>', 'Tell us about your pool. We can bring a projector for a live demo on site.') + '''
   <section class="block" aria-labelledby="contact-title">
     <div class="wrap contact">
       <div>
