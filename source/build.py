@@ -9,6 +9,14 @@ os.makedirs(OUT, exist_ok=True)
 
 EXTRA_CSS = r"""
 /* ---- multi-page additions ---- */
+/* brand: logo gradient used sparingly, logo more present */
+:root { --brand-grad: linear-gradient(90deg, #005ae3 0%, #09c2e4 35%, #a25de1 70%, #fb4d96 100%); }
+header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--brand-grad); }
+.logo img { height: 2.6rem; }
+.hero-logo { height: clamp(3.6rem, 9vw, 6rem); width: auto; max-width: 100%; }
+.cta-band { position: relative; }
+.cta-band::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--brand-grad); }
+.cta-band .cta-logo { height: 3.2rem; width: auto; }
 nav.main a[aria-current="page"] { color: var(--fg); text-decoration: underline; text-decoration-color: var(--lumen); text-underline-offset: .45em; text-decoration-thickness: 2px; }
 .page-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
 .page-hero .bgimg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -186,6 +194,7 @@ def page(fname, title, desc, cur, body, standalone=True):
 def cta(title='See it in your pool', text='We bring a unit to your pool for a live demo.'):
     return f'''
   <div class="cta-band"><div class="wrap">
+    <img class="cta-logo logo-w" src="assets/logo-white.png" alt="" width="480" height="119"><img class="cta-logo logo-c" src="assets/logo-color.png" alt="" width="480" height="124">
     <div><h2>{title}</h2><p style="margin-top:.6rem;color:var(--muted)">{text}</p></div>
     <a class="btn btn-primary" href="contact.html">Book a demo</a>
   </div></div>'''
@@ -267,6 +276,7 @@ def build():
     </div>
     <button class="vid-toggle" type="button" id="hero-toggle" aria-pressed="false">Pause video</button>
     <div class="wrap">
+      <img class="hero-logo logo-w" src="assets/logo-full-white.png" alt="Pool-On, Unlimited Emotions" width="520" height="164"><img class="hero-logo logo-c" src="assets/logo-full-color.png" alt="Pool-On, Unlimited Emotions" width="520" height="169">
       <span class="eyebrow">The world-first underwater video projector</span>
       <h1 id="hero-title">Turn your pool into a <em>new playground</em></h1>
       <p class="lede">Pool-On projects games, swim lessons and guided workouts onto the bottom of the pool. It clamps onto the edge, needs no construction work and runs from a tablet.</p>

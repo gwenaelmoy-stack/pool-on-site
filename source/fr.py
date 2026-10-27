@@ -208,6 +208,7 @@ FR = {
 "National TV report on Pool-On": "Reportage national sur Pool-On",
 "France 3 Provence-Alpes-Côte d’Azur": "France 3 Provence-Alpes-Côte d’Azur",
 "Regional TV report on Pool-On": "Reportage régional sur Pool-On",
+"Legal notice &amp; privacy": "Mentions légales et confidentialité",
 "Videos load from YouTube only when you press play.": "Les vidéos se chargent depuis YouTube seulement quand vous appuyez sur lecture.",
 "All videos on our YouTube channel →": "Toutes les vidéos sur notre chaîne YouTube →",
 "Try the content in your pool": "Testez les contenus dans votre piscine",
