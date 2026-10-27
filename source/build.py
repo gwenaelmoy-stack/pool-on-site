@@ -253,13 +253,13 @@ MARKETS = [
     ('public', 'Public pools · aquatic centres', 'Fill the off-peak hours', 'coach.webp', 'A coach runs a projected swim lesson from a tablet at the pool edge',
      'Gamified sessions increase attendance by drawing families, schools and clubs in between the busy slots, and give your staff new tools to teach.',
      ['Swim lessons built with national swimming coaches', 'Themed family sessions at weekends and holidays', 'A paid add-on to the standard ticket', 'Rehabilitation and senior programmes']),
-    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'hotel-event.webp', 'Guests dining around a hotel pool at night while a Pool-On projector projects images under the water',
+    ('hotels', 'Hotels · resorts · campsites', 'A pool guests talk about', 'villa-night.webp', 'A Pool-On projector projecting a Keith Haring artwork into an infinity pool overlooking the sea at dusk',
      'Evening shows, kids\' clubs and a visual signature for the pool area that guests share on social media.',
      ['Lagoon, space and art gallery scenes', 'Kids\' club programmes', 'Night shows for the bar and terrace', 'Your own branded content']),
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
      'Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.',
      ['Avatar-led workouts', 'Timed training sets in each lane', 'Group programmes updated over time']),
-    ('events', 'Events · MICE', 'Rent the pool as a stage', 'festival-night.webp', 'Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen',
+    ('events', 'Events · MICE', 'Rent the pool as a stage', 'garden-party.webp', 'Guests around a garden pool at night while a Pool-On projector projects coloured light under the water',
      'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several projectors can run together.',
      ['Team challenges', 'Sponsored broadcasts', 'Multi-projector shows for large pools', 'Live or recorded content']),
 ]
@@ -361,8 +361,8 @@ def build():
         <h2 id="ref-title">Already in the water</h2>
       </div>
       <div class="refs">
-        <article class="ref"><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On projector projects images under the water" loading="lazy"><div class="body"><b>Hotel event</b><small>Evening dinner around the pool</small></div></article>
-        <article class="ref"><img src="assets/festival-night.webp" alt="Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy"><div class="body"><b>Film festival</b><small>Multi-projector night show · 2025</small></div></article>
+        <article class="ref"><img src="assets/villa-night.webp" alt="A Pool-On projector projecting a Keith Haring artwork into an infinity pool overlooking the sea at dusk" loading="lazy"><div class="body"><b>Sea-view villa</b><small>Art show in an infinity pool</small></div></article>
+        <article class="ref"><img src="assets/garden-party.webp" alt="Guests around a garden pool at night while a Pool-On projector projects coloured light under the water" loading="lazy"><div class="body"><b>Film festival</b><small>Garden party around the pool · 2025</small></div></article>
         <article class="ref"><img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer in a lane" loading="lazy"><div class="body"><b>Swim lesson trial</b><small>Club pool · 2025</small></div></article>
       </div>
       <a class="more" href="references.html">All references and press →</a>
@@ -510,12 +510,12 @@ def build():
     <div class="wrap">
       <div class="stack">
         <article class="split">
-          <img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On projector projects images under the water" loading="lazy">
-          <div class="txt"><span class="eyebrow">Hotel · Event</span><h2>Hotel event</h2><p>An evening dinner around the hotel pool: the Pool-On projector sits on the edge and turns the water into a screen for the guests.</p></div>
+          <img src="assets/villa-night.webp" alt="A Pool-On projector projecting a Keith Haring artwork into an infinity pool overlooking the sea at dusk" loading="lazy">
+          <div class="txt"><span class="eyebrow">Hospitality · Villa</span><h2>Sea-view villa</h2><p>At dusk, the Pool-On projector on the edge of an infinity pool turns the water into an art gallery facing the sea.</p></div>
         </article>
         <article class="split rev">
-          <img src="assets/festival-night.webp" alt="Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy">
-          <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A multi-projector night show: festival branding and content projected across the pool.</p></div>
+          <img src="assets/garden-party.webp" alt="Guests around a garden pool at night while a Pool-On projector projects coloured light under the water" loading="lazy">
+          <div class="txt"><span class="eyebrow">Event · 2025</span><h2>Film festival</h2><p>A garden party around the pool: several projectors light up the water with festival branding and colour for the guests.</p></div>
         </article>
         <article class="split">
           <img src="assets/lane-coach.webp" alt="A coach watches a swimmer follow a projected pacer" loading="lazy">
@@ -523,9 +523,9 @@ def build():
         </article>
       </div>
       <div class="shots">
-        <figure><img src="assets/unit-beam.webp" alt="Pool-On projector clamped on the edge of a tiled pool" loading="lazy"><figcaption>PO-1.2 on the pool edge</figcaption></figure>
+        <figure><img src="assets/hotel-event.webp" alt="Guests dining around a hotel pool at night while a Pool-On projector projects images under the water" loading="lazy"><figcaption>Hotel dinner event</figcaption></figure>
         <figure><img src="assets/vangogh-night.webp" alt="A Van Gogh painting projected into a pool at night" loading="lazy"><figcaption>Van Gogh night show · 2025</figcaption></figure>
-        <figure><img src="assets/aquagym.webp" alt="An aquagym session over projected content" loading="lazy"><figcaption>Aquagym session · 2025</figcaption></figure>
+        <figure><img src="assets/festival-night.webp" alt="Pool-On projectors projecting festival content into a pool at night, in front of an open-air cinema screen" loading="lazy"><figcaption>Open-air cinema night · 2025</figcaption></figure>
       </div>
     </div>
   </section>
