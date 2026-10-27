@@ -433,7 +433,7 @@ def build():
               <tr><th scope="row">Weight</th><td>18 kg, mobile</td></tr>
               <tr><th scope="row">Mounting</th><td>Universal edge mount, no construction work</td></tr>
               <tr><th scope="row">Light source</th><td>Optoma DuraCore laser, Full HD</td></tr>
-              <tr><th scope="row">Brightness</th><td>5,000 lm <span class="todo">à confirmer</span></td></tr>
+              <tr><th scope="row">Brightness</th><td>5,000 lm</td></tr>
               <tr><th scope="row">Resolution</th><td>1920 × 1080 Full HD <span class="todo">à confirmer</span></td></tr>
               <tr><th scope="row">Protection</th><td>IP5X · IP69K</td></tr>
               <tr><th scope="row">Power</th><td>Low voltage, rated 24/7</td></tr>
