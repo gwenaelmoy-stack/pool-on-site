@@ -186,6 +186,8 @@ FR = {
 "Kids more at ease in the water": "Des enfants plus à l’aise dans l’eau",
 "As seen on M6, 12.45 news": "Vu au 12.45 de M6",
 "France 3 Provence-Alpes-Côte d’Azur report": "Reportage France 3 Provence-Alpes-Côte d’Azur",
+"Gwénaël Moy, President": "Gwénaël Moy, président",
+"Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. www.cloudflare.com": "Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. www.cloudflare.com",
 "Videos load from YouTube only when you press play.": "Les vidéos se chargent depuis YouTube seulement quand vous appuyez sur lecture.",
 "All videos on our YouTube channel →": "Toutes les vidéos sur notre chaîne YouTube →",
 "Try the content in your pool": "Testez les contenus dans votre piscine",
@@ -321,5 +323,7 @@ for i in range(1, 7):
 JS_FR = [
     ("'Play video'", "'Lire la vidéo'"),
     ("'Pause video'", "'Mettre la vidéo en pause'"),
+    ("'Pool-On demo request · '", "'Demande de démo Pool-On · '"),
+    ("'Your email app should open with the request ready to send. If nothing happens, write to contact@pool-on.com.'", "'Votre messagerie va s\\u2019ouvrir avec la demande prête à envoyer. Sinon, écrivez à contact@pool-on.com.'"),
     ("'Please add your name and a valid work email.'", "'Merci d\\u2019indiquer votre nom et un e-mail professionnel valide.'"),
 ]

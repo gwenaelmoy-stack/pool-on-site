@@ -3,5 +3,5 @@
   "name": "pool-on-site",
   "compatibility_date": "2026-10-19",
   "observability": { "enabled": true },
-  "assets": { "directory": "site" }
+  "assets": { "directory": "site", "not_found_handling": "404-page" }
 }

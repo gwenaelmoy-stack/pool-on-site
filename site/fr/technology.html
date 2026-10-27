@@ -14,8 +14,6 @@
 <link rel="alternate" hreflang="fr" href="technology.html">
 </head>
 <body>
-<div class="mock-banner"><div class="wrap">Maquette de travail : textes provisoires, les éléments marqués <span class="todo">à fournir</span> attendent vos photos, noms et chiffres. Rien n'est en ligne sur pool-on.com.</div></div>
-
 <header class="top">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Accueil Pool-On"><img class="logo-w" src="../assets/logo-white.png" alt="Pool-On" width="480" height="119"><img class="logo-c" src="../assets/logo-color.png" alt="Pool-On" width="480" height="124"></a>
@@ -154,7 +152,16 @@
     var name = document.getElementById('f-name').value.trim();
     var email = document.getElementById('f-email').value.trim();
     if (!name || !/^\S+@\S+\.\S+$/.test(email)) { note.textContent = 'Merci d\u2019indiquer votre nom et un e-mail professionnel valide.'; return; }
-    note.textContent = 'Maquette : l\u2019envoi est d\u00e9sactiv\u00e9. Sur le vrai site, la demande arrivera par e-mail.';
+    // No server: open the visitor's email app with the request ready to send.
+    var lines = [];
+    form.querySelectorAll('label').forEach(function (l) {
+      var f = l.querySelector('input, select, textarea');
+      if (f && f.value.trim()) lines.push(l.firstChild.textContent.trim() + ' : ' + f.value.trim());
+    });
+    var org = document.getElementById('f-org').value.trim();
+    var subject = 'Demande de démo Pool-On · ' + name + (org ? ' (' + org + ')' : '');
+    location.href = 'mailto:contact@pool-on.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    note.textContent = 'Votre messagerie va s\u2019ouvrir avec la demande prête à envoyer. Sinon, écrivez à contact@pool-on.com.';
   });
 })();
 </script>
