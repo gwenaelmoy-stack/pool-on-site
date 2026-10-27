@@ -167,6 +167,8 @@ footer .wrap { display: grid; gap: .6rem; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 
 /* ---- multi-page additions ---- */
+/* never break the brand name at its hyphen */
+.nw { white-space: nowrap; }
 /* brand: logo gradient used sparingly, logo more present */
 :root { --brand-grad: linear-gradient(90deg, #005ae3 0%, #09c2e4 35%, #a25de1 70%, #fb4d96 100%); }
 header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--brand-grad); }

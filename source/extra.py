@@ -62,7 +62,7 @@ def structured_data(lang):
     desc = {'en': 'Mobile underwater video projector for swimming pools: games, swim lessons, workouts and events.',
             'fr': 'Vidéoprojecteur subaquatique mobile pour piscines : jeux, cours de natation, entraînements et événements.'}[lang]
     org = {'@type': 'Organization', '@id': DOMAIN + '/#org', 'name': 'Pool-On', 'legalName': 'SAS Pool-On',
-           'url': DOMAIN + '/', 'logo': DOMAIN + '/assets/logo-full-color.png', 'email': 'contact@pool-on.com',
+           'url': DOMAIN + '/', 'logo': DOMAIN + '/assets/logo-full-color.png', 'email': 'contact@pool-on.com', 'telephone': '+33 6 51 92 72 02',
            'slogan': 'Unlimited Emotions', 'vatID': 'FR75909766222', 'taxID': '909766222',
            'address': {'@type': 'PostalAddress', 'streetAddress': '943 voie Antiope', 'postalCode': '13600',
                        'addressLocality': 'La Ciotat', 'addressCountry': 'FR'},
@@ -125,11 +125,34 @@ def llms():
 - [Content](%(d)s/content.html): the six ways to use the water, with videos.
 - [Technology](%(d)s/technology.html): specifications and intellectual property.
 - [References](%(d)s/references.html): installations, events and press.
-- [Contact](%(d)s/contact.html): book a demo in your pool. Email: contact@pool-on.com.
+- [Contact](%(d)s/contact.html): book a demo in your pool. Email: contact@pool-on.com. Phone: +33 6 51 92 72 02.
 - French version: %(d)s/fr/
 """ % {'d': DOMAIN})
 
+SKIP = ('script', 'style', 'title', 'option', 'textarea')
+
+def no_break(h):
+    # Wrap the brand name in visible text so it never wraps at its hyphen.
+    out, skip = [], None
+    for part in re.split(r'(<[^>]+>)', h):
+        if part.startswith('<'):
+            m = re.match(r'<(/?)([a-zA-Z0-9]+)', part)
+            if m and m.group(2).lower() in SKIP:
+                skip = None if m.group(1) else m.group(2).lower()
+        elif skip is None:
+            part = re.sub(r'(Pool-On|POOL-ON)', r'<span class="nw">\1</span>', part)
+        out.append(part)
+    return ''.join(out)
+
+def wrap_brand():
+    files = [os.path.join(SITE, 'fr' if l == 'fr' else '', p + '.html') for l in ('en', 'fr') for p in PAGES]
+    files += [os.path.join(SITE, '404.html'), os.path.join(HERE, 'artifact-index.html')]
+    for f in files:
+        h = open(f).read()
+        open(f, 'w').write(no_break(h))
+
 not_found()
+wrap_brand()
 seo()
 robots_and_sitemap()
 llms()

@@ -9,6 +9,8 @@ os.makedirs(OUT, exist_ok=True)
 
 EXTRA_CSS = r"""
 /* ---- multi-page additions ---- */
+/* never break the brand name at its hyphen */
+.nw { white-space: nowrap; }
 /* brand: logo gradient used sparingly, logo more present */
 :root { --brand-grad: linear-gradient(90deg, #005ae3 0%, #09c2e4 35%, #a25de1 70%, #fb4d96 100%); }
 header.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--brand-grad); }
@@ -120,6 +122,7 @@ FOOTER = '''
   <div class="wrap">
     <div class="foot-logo"><img class="logo-w" src="assets/logo-full-white.png" alt="Pool-On, Unlimited Emotions" width="520" height="164"><img class="logo-c" src="assets/logo-full-color.png" alt="Pool-On, Unlimited Emotions" width="520" height="169"></div>
     <span>Pool-On SAS · 943 voie Antiope, 13600 La Ciotat, France · RCS Marseille 909 766 222</span>
+    <span><a href="mailto:contact@pool-on.com">contact@pool-on.com</a> · <a href="tel:+33651927202">+33 (0)6 51 92 72 02</a></span>
     <span>POOL-ON is a registered EU trademark (EUIPO no. 018650491). Optoma and DuraCore are trademarks of their respective owner.</span>
     <div class="cols">
       <a href="solutions.html">Solutions</a><a href="content.html">Content</a><a href="technology.html">Technology</a><a href="references.html">References</a><a href="contact.html">Contact</a><a href="legal.html">Legal notice &amp; privacy</a>
@@ -259,7 +262,7 @@ MARKETS = [
     ('fitness', 'Aquafitness · clubs', 'Coach a full class', 'aquabike.webp', 'An aquabike class over a projected workout grid',
      'Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.',
      ['Avatar-led workouts', 'Timed training sets in each lane', 'Group programmes updated over time']),
-    ('events', 'Events · MICE', 'Rent the pool as a stage', 'garden-party.webp', 'Guests around a garden pool at night while a Pool-On projector projects coloured light under the water',
+    ('events', 'Events · MICE', 'Use the pool as a stage', 'garden-party.webp', 'Guests around a garden pool at night while a Pool-On projector projects coloured light under the water',
      'Team building, corporate evenings and sponsored sessions, with your logo and content under the water. Several projectors can run together.',
      ['Team challenges', 'Sponsored broadcasts', 'Multi-projector shows for large pools', 'Live or recorded content']),
 ]
@@ -368,8 +371,7 @@ def build():
       <a class="more" href="references.html">All references and press →</a>
 {partners()}
     </div>
-  </section>
-{cta()}'''
+  </section>'''
     page('index.html', 'Pool-On · Underwater projection that turns your pool into a playground', 'Pool-On turns any pool into a new playground with underwater video projection: games, swim lessons, workouts and events.', 'index.html', home, standalone=False)
 
     # ---------- Solutions ----------
@@ -554,6 +556,7 @@ def build():
         <h2 id="contact-title">Talk to us</h2>
         <dl>
           <dt>Email</dt><dd><a href="mailto:contact@pool-on.com">contact@pool-on.com</a></dd>
+          <dt>Phone</dt><dd><a href="tel:+33651927202">+33 (0)6 51 92 72 02</a></dd>
           <dt>Office</dt><dd>943 voie Antiope, 13600 La Ciotat, France</dd>
           <dt>Distributors</dt><dd>Ask for the partner kit</dd>
         </dl>
@@ -601,7 +604,7 @@ def build():
           <dt>Registration</dt><dd>RCS Marseille 909 766 222</dd>
           <dt>VAT</dt><dd>FR75 909 766 222</dd>
           <dt>Publication director</dt><dd>Gwénaël Moy, President</dd>
-          <dt>Contact</dt><dd>contact@pool-on.com</dd>
+          <dt>Contact</dt><dd>contact@pool-on.com · +33 (0)6 51 92 72 02</dd>
         </dl>
       </section>
       <section><h2>Hosting</h2><p>Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. www.cloudflare.com</p></section>

@@ -55,7 +55,7 @@ FR = {
 "Guided aquabike, aquagym and aquatraining, with an on-screen coach every participant can follow.": "Aquabike, aquagym et aquatraining guidés, avec un coach projeté que chaque participant peut suivre.",
 "SCAD Lacoste Film Festival logo projected into a pool at night with several Pool-On projectors": "Logo du SCAD Lacoste Film Festival projeté de nuit dans une piscine avec plusieurs projecteurs Pool-On",
 "Events · MICE": "Événementiel · séminaires",
-"Rent the pool as a stage": "Louez la piscine comme une scène",
+"Use the pool as a stage": "Utilisez la piscine comme une scène",
 "Team building, corporate evenings and sponsored sessions, with your logo and content under the water.": "Team building, soirées d'entreprise et séances sponsorisées, avec votre logo et vos contenus sous l'eau.",
 "Content platform": "Plateforme de contenus",
 "Turn your pool into an augmented playfield": "Faites de votre piscine un terrain de jeu augmenté",
