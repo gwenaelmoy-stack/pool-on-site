@@ -4,7 +4,7 @@ import os, re, json, html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(os.path.dirname(HERE), 'site')
-DOMAIN = 'https://www.pool-on.com'
+DOMAIN = 'https://pool-on.com'
 PAGES = ['index', 'solutions', 'content', 'technology', 'references', 'contact', 'legal']
 
 NOT_FOUND = '''<main id="top">

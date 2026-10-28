@@ -15,9 +15,9 @@
 - Content platform with games, immersive scenes, lessons and workouts, launched from a tablet or smartphone app; customers can add their own videos and logos.
 
 ## Pages
-- [Solutions](https://www.pool-on.com/solutions.html): uses by type of venue.
-- [Content](https://www.pool-on.com/content.html): the six ways to use the water, with videos.
-- [Technology](https://www.pool-on.com/technology.html): specifications and intellectual property.
-- [References](https://www.pool-on.com/references.html): installations, events and press.
-- [Contact](https://www.pool-on.com/contact.html): book a demo in your pool. Email: contact@pool-on.com. Phone: +33 6 51 92 72 02.
-- French version: https://www.pool-on.com/fr/
+- [Solutions](https://pool-on.com/solutions.html): uses by type of venue.
+- [Content](https://pool-on.com/content.html): the six ways to use the water, with videos.
+- [Technology](https://pool-on.com/technology.html): specifications and intellectual property.
+- [References](https://pool-on.com/references.html): installations, events and press.
+- [Contact](https://pool-on.com/contact.html): book a demo in your pool. Email: contact@pool-on.com. Phone: +33 6 51 92 72 02.
+- French version: https://pool-on.com/fr/
