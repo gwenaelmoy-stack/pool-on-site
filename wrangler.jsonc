@@ -3,6 +3,7 @@
   "name": "pool-on-site",
   "compatibility_date": "2026-10-19",
   "observability": { "enabled": true },
+  "previews": {},
   "routes": [
     { "pattern": "www.pool-on.com", "custom_domain": true },
     { "pattern": "pool-on.com", "custom_domain": true }
