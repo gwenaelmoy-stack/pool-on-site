@@ -11,3 +11,7 @@ https://pool-on-site.gwenaelmoy.workers.dev/*
 
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
+
+# Hidden page, reachable only by its address.
+/lightswell/*
+  X-Robots-Tag: noindex, nofollow
