@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="LightSwell: the first pool light that moves.">
+<title>LightSwell — Light in motion for your pool</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;background:#ffffff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#122E49}a:hover{color:#0B8A8A}
+.beam{background:linear-gradient(90deg,#0891B2,#4F46E5);-webkit-background-clip:text;background-clip:text;color:transparent}
+details>summary{cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details[open] .chev{transform:rotate(180deg)}
+</style>
+</helmet>
+<div style="width: 100%; font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #151F28; background: #ffffff">
+
+<!-- NAV -->
+<header style="background: rgba(255,255,255,0.95); border-bottom: 1px solid #E1E7EE">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+<a href="#top" aria-label="LightSwell home" style="display: flex; align-items: center; gap: 10px; text-decoration: none">
+<canvas ref="{{refLogo1}}" aria-hidden="true" style="width: 36px; height: 36px; border-radius: 9px; display: block; background: #071422"></canvas>
+<span style="font-weight: 800; font-size: 24px; letter-spacing: -0.02em; color: #000000">Light<span class="beam">Swell</span><span style="font-size: 12px; vertical-align: super; color: #000000">™</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; gap: 28px; flex-wrap: wrap; align-items: center; font-size: 15px; font-weight: 500">
+<a href="#features" style="text-decoration: none; color: #151F28">Features</a>
+<a href="#how" style="text-decoration: none; color: #151F28">How it works</a>
+<a href="#order" style="text-decoration: none; color: #151F28">Early access</a>
+<a href="#faq" style="text-decoration: none; color: #151F28">FAQ</a>
+</nav>
+<a href="#order" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; border-radius: 10px; background: #2BEEEE; color: #0F2A44; font-weight: 600; font-size: 15px; text-decoration: none">Join the waitlist</a>
+</div>
+</header>
+
+<!-- HERO : original photo + live lasers -->
+<section id="top" style="position: relative; overflow: hidden; background: #0B1B2B; color: #ffffff">
+<canvas ref="{{refHero}}" role="img" aria-label="Night view of a luxury pool from above: from the bottom of the pool, beams of light shoot out one after another and burst into fireworks on the pool floor" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
+<div style="position: relative; max-width: 900px; margin: 0 auto; padding: 150px 24px 170px; display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
+<h1 style="margin: 0; font-size: clamp(42px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.35)">Your pool, your canvas.</h1>
+<p style="margin: 0; max-width: 720px; font-size: 20px; line-height: 1.55; color: rgba(255,255,255,0.9); text-shadow: 0 1px 12px rgba(0,0,0,0.4)">Replace your standard pool light with <span style="color: #2BEEEE; font-weight: 600">LightSwell™</span>, the first pool light that moves — fireworks, starry skies and sweeping light that dance across your whole pool, from your smartphone.</p>
+<p style="margin: 0; font-size: 15px; color: rgba(255,255,255,0.85)">Launch price from €990 (indicative) • Pro installation • iOS &amp; Android app</p>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; padding-top: 10px">
+<a href="#order" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 28px; border-radius: 10px; background: #2BEEEE; color: #0F2A44; font-weight: 600; text-decoration: none; box-shadow: 0 0 30px rgba(43,238,238,0.35)">Join the waitlist</a>
+<a href="#app" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 28px; border-radius: 10px; background: rgba(15,42,68,0.75); border: 1px solid rgba(255,255,255,0.25); color: #ffffff; font-weight: 600; text-decoration: none">See it in action</a>
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">How it works</h2>
+<p style="margin: 0; font-size: 18px; color: #5A6B7D">Transform your pool in three simple steps</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div style="padding: 32px; border-radius: 16px; background: #ffffff; border: 1px solid #E1E7EE; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 44px; font-weight: 800; color: #2BEEEE; -webkit-text-stroke: 1px #0B8A8A">01</p>
+<h3 style="margin: 0; font-size: 20px; color: #122E49">Replace your existing light</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Swap your niche light with the LightSwell module (fits most standard PAR56-size niches; IP68).</p>
+</div>
+<div style="padding: 32px; border-radius: 16px; background: #ffffff; border: 1px solid #E1E7EE; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 44px; font-weight: 800; color: #2BEEEE; -webkit-text-stroke: 1px #0B8A8A">02</p>
+<h3 style="margin: 0; font-size: 20px; color: #122E49">Connect &amp; pair</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Connect to Wi-Fi and pair the app to your LightSwell in seconds.</p>
+</div>
+<div style="padding: 32px; border-radius: 16px; background: #ffffff; border: 1px solid #E1E7EE; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 44px; font-weight: 800; color: #2BEEEE; -webkit-text-stroke: 1px #0B8A8A">03</p>
+<h3 style="margin: 0; font-size: 20px; color: #122E49">Start the show</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Pick a light show from our curated library — fireworks, constellations, waves — or build your own sequences.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" style="background: #F3F6F9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Key features</h2>
+<p style="margin: 0; font-size: 18px; color: #5A6B7D">Premium technology meets elegant design</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="19" r="1.6"></circle><path d="M6.2 17.8L17 4M6.6 18.4L21 10.5M6.8 19.2L21 18"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Light in motion</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Beams, waves, fireworks and starfields that move across the whole pool — something a standard pool light can't do.</p>
+</div>
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 3v5M21 12h-5M12 21v-5M3 12h5"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Vivid, saturated colours</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Intense colours and sharp lines of light, from small pools to large ones (1–20 m).</p>
+</div>
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Smartphone control</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Brightness, colours, show speed, playlists, timers — all from your iOS or Android device.</p>
+</div>
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18 9.5l-4.2 1.9L12 16l-1.8-4.6L6 9.5l4.2-1.9z"></path><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Event modes</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Slow, elegant light loops for dinners; fast, vivid light shows for parties. Set the perfect mood.</p>
+</div>
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Safe &amp; sealed</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">IP68 rated, low-voltage driver, thermal &amp; moisture protection built in.</p>
+</div>
+<div style="padding: 28px; border-radius: 16px; background: #ffffff; box-shadow: 0 6px 24px rgba(18,46,73,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="width: 48px; height: 48px; border-radius: 12px; background: #C9F8F8; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px; color: #122E49">Energy-efficient light engine</h3>
+<p style="margin: 0; line-height: 1.6; color: #5A6B7D">Solid-state technology: long life, low power draw, no bulb to replace.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- MOBILE APP -->
+<section id="app" style="background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+<span style="display: inline-block; padding: 6px 14px; border-radius: 999px; background: #D7FAFA; color: #0B6E6E; font-size: 13px; font-weight: 600">Mobile App</span>
+<h2 style="margin: 0; font-size: clamp(32px, 3.6vw, 48px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Pick. Tap. Project.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #5A6B7D">Our intuitive app puts complete control at your fingertips. Pick a show, adjust colours and speed, create playlists and schedule events — all from your smartphone.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; color: #33475B">
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="color: #0BB5B5; font-weight: 700">✓</span><span>Library of ready-made light shows (fireworks, stars, waves…)</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="color: #0BB5B5; font-weight: 700">✓</span><span>Scene playlists &amp; scheduled events</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="color: #0BB5B5; font-weight: 700">✓</span><span>Show-area calibration to fit your pool's shape and depth</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="color: #0BB5B5; font-weight: 700">✓</span><span>Kid mode &amp; brightness limits</span></li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><span aria-hidden="true" style="color: #0BB5B5; font-weight: 700">✓</span><span>Over-the-air updates</span></li>
+</ul>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; position: relative; aspect-ratio: 1 / 1; border-radius: 24px; overflow: hidden; background: #0B1B2B; box-shadow: 0 24px 60px rgba(18,46,73,0.25)">
+<canvas ref="{{refApp}}" role="img" aria-label="A pool at dusk, a hand holding the app; light fireworks and a constellation animate on the water, alternating with beams sweeping across the pool" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
+</div>
+</div>
+</section>
+
+<!-- ENGINEERING -->
+<section id="engineering" style="background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 96px; display: flex; flex-wrap: wrap-reverse; gap: 56px; align-items: center">
+<div style="flex: 1 1 480px; min-width: 0; position: relative; aspect-ratio: 1 / 1; border-radius: 24px; overflow: hidden; background: #0B1B2B; box-shadow: 0 24px 60px rgba(18,46,73,0.25)">
+<canvas ref="{{refTech}}" role="img" aria-label="Underwater view: the octagon pattern projected on the pool floor appears, slowly turns and fades out" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"></canvas>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+<span style="display: inline-block; padding: 6px 14px; border-radius: 999px; background: #FEF1D2; color: #8A5A00; font-size: 13px; font-weight: 600">Engineering Excellence</span>
+<h2 style="margin: 0; font-size: clamp(32px, 3.6vw, 48px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Built for perfection</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #5A6B7D">Engineered with premium materials and a next-generation light engine to deliver vivid, moving light shows underwater, every single time.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; color: #33475B; line-height: 1.5">
+<li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #F5B731"></span><span><strong style="color: #122E49">IP68 rated</strong> — fully sealed and submersible</span></li>
+<li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #F5B731"></span><span><strong style="color: #122E49">Low voltage</strong> — safe pool-side operation</span></li>
+<li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #F5B731"></span><span><strong style="color: rgb(18, 46, 73)">Next-generation light engine</strong> — vivid colours and fluid, fast-moving effects</span></li>
+<li style="display: flex; gap: 12px"><span aria-hidden="true" style="flex: none; width: 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #F5B731"></span><span><strong style="color: #122E49">Marine-grade materials</strong> — stainless steel + UV-stable polymer</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- POSSIBILITIES (original dark section) -->
+<section id="uses" style="background: #122E49; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em">Endless possibilities</h2>
+<p style="margin: 0; font-size: 18px; color: rgba(255,255,255,0.8)">From quiet evenings to celebration nights, LightSwell adapts to every moment</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px">
+<div style="padding: 32px 24px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<div style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(43,238,238,0.5); background: rgba(43,238,238,0.12); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2BEEEE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.6L18 9.5l-4.2 1.9L12 16l-1.8-4.6L6 9.5l4.2-1.9z"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px">Lifestyle</h3>
+<p style="margin: 0; line-height: 1.55; color: rgba(255,255,255,0.75)">Ambient waves, starry skies, slow colour sweeps</p>
+</div>
+<div style="padding: 32px 24px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<div style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(43,238,238,0.5); background: rgba(43,238,238,0.12); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2BEEEE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px">Family</h3>
+<p style="margin: 0; line-height: 1.55; color: rgba(255,255,255,0.75)">Birthday fireworks, names in light, team colours</p>
+</div>
+<div style="padding: 32px 24px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<div style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(43,238,238,0.5); background: rgba(43,238,238,0.12); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2BEEEE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c2.8.2 5 2.5 5 5.5"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px">Entertaining</h3>
+<p style="margin: 0; line-height: 1.55; color: rgba(255,255,255,0.75)">Dinner parties and pool parties with animated light shows</p>
+</div>
+<div style="padding: 32px 24px; border-radius: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<div style="width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(43,238,238,0.5); background: rgba(43,238,238,0.12); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2BEEEE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"></path></svg></div>
+<h3 style="margin: 0; font-size: 19px">Branding</h3>
+<p style="margin: 0; line-height: 1.55; color: rgba(255,255,255,0.75)">Simple logos and monograms drawn in light, seasonal themes</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SPECS -->
+<section id="specs" style="background: #F3F6F9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Technical specifications</h2>
+<p style="margin: 0; font-size: 17px; color: #55667A">Engineered for performance and reliability</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
+<div style="padding: 28px; border-radius: 18px; background: #ffffff; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 18px; color: #122E49">Light Show</h3>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; color: #55667A; line-height: 1.5"><li>Full-pool animated light effects</li><li>Easy calibration</li><li>Optimized for twilight/night use</li></ul>
+</div>
+<div style="padding: 28px; border-radius: 18px; background: #ffffff; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 18px; color: #122E49">Power &amp; Safety</h3>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; color: #55667A; line-height: 1.5"><li>Low-voltage system</li><li>IP68 housing with thermal cutoff</li><li>Moisture sensors &amp; auto-shutoff</li></ul>
+</div>
+<div style="padding: 28px; border-radius: 18px; background: #ffffff; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 18px; color: #122E49">Materials</h3>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; color: #55667A; line-height: 1.5"><li>Marine-grade stainless steel</li><li>UV-stable polymer construction</li><li>Freshwater/salt compatible</li></ul>
+</div>
+<div style="padding: 28px; border-radius: 18px; background: #ffffff; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 18px; color: #122E49">Compatibility</h3>
+<ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; color: #55667A; line-height: 1.5"><li>Standard PAR56 niche replacement</li><li>Concrete, fiberglass, liner pools</li><li>2.4 GHz Wi-Fi connectivity</li></ul>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 18px; font-weight: 600; color: #122E49">Designed by underwater lighting experts</p>
+<p style="margin: 0; color: #55667A">2-year warranty • Professional support • Certified installer network</p>
+</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="order" style="background: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #0B6E8A">Early access</p>
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Complete system with professional installation</h2>
+</div>
+<div style="width: 100%; max-width: 540px; padding: 40px; border-radius: 24px; border: 2px solid #122E49; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h3 style="margin: 0; font-size: 20px; color: #122E49">Launch package</h3>
+<p style="margin: 0; font-size: 56px; font-weight: 700; letter-spacing: -0.03em; color: #122E49">€990</p>
+<p style="margin: 0; font-size: 14px; color: #55667A">Indicative launch price, VAT included</p>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>1× LightSwell module (IP68)</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Low-voltage driver/control box</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Mounting kit &amp; adapters for standard niches</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Mobile app (iOS/Android)</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Quick-start guide</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Pro installation in supported zones</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>2-year warranty</li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 1px"><path d="M5 12l5 5L20 7"></path></svg>Technical support</li>
+</ul>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a href="#order" style="flex: 1 1 180px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: #122E49; color: #ffffff; font-weight: 600; text-decoration: none">Join the waitlist</a>
+<a href="#order" style="flex: 1 1 180px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; border: 1px solid #122E49; color: #122E49; font-weight: 600; text-decoration: none">Request a demo</a>
+</div>
+<p style="margin: 0; font-size: 13px; color: #55667A; text-align: center">Optional certified installation &amp; show-area calibration available (recommended)</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background: #F3F6F9">
+<div style="max-width: 860px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: #122E49">Frequently asked questions</h2>
+<p style="margin: 0; font-size: 17px; color: #55667A">Everything you need to know about LightSwell</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">What can LightSwell display?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">LightSwell creates moving light effects: lines, waves, fireworks, starfields, simple logos and text — all in motion across the whole pool. It is a light-show system, not a video projector.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">Does it work in daylight?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">Best performance is at dusk/night. In full daylight, light effects are visible but with lower contrast. The system shines brightest when ambient light is reduced.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">What if my pool water is cloudy?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">Clear water gives the sharpest, brightest beams. Regular pool maintenance ensures the best show.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">How long does it last?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">LightSwell uses long-life solid-state technology, with no bulb to replace. The module is replaceable when needed.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">Is it compatible with my pool?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">LightSwell fits most standard PAR56-size niches and works with concrete, fiberglass, and liner pools with flat or lightly textured floors. Adapters are available for various niche types.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">Do I need Wi-Fi?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">2.4 GHz Wi-Fi is required for app control. If Wi-Fi is unavailable, LightSwell will play the last selected show as a fallback.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">Is it safe?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">LightSwell is IP68 rated, operates on low voltage, and includes thermal cutoff and moisture sensors. It is designed for safe use underwater, with families in mind.</p></details>
+<details style="background: #ffffff; border-radius: 14px; padding: 0 22px"><summary style="min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-weight: 600; color: #122E49">Can I install it myself?<svg class="chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#122E49" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></summary><p style="margin: 0; padding-bottom: 20px; line-height: 1.6; color: #55667A">While the installation kit is included, we recommend professional installation for optimal show-area calibration and safety compliance. Pro installation is included in supported zones.</p></details>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section style="background: #071422; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(32px, 4vw, 52px); letter-spacing: -0.02em">Light in motion, under the water</h2>
+<p style="margin: 0; font-size: 18px; color: #C9D6E3">Be among the first to bring LightSwell™ to your pool.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center">
+<a href="#order" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 12px; background: #2BEEEE; color: #0F2A44; font-weight: 600; text-decoration: none">Join the waitlist</a>
+<a href="#order" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.35); color: #ffffff; font-weight: 600; text-decoration: none">Request demo</a>
+<a href="#order" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.35); color: #ffffff; font-weight: 600; text-decoration: none">Contact sales</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #F3F6F9">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px">
+<canvas ref="{{refLogo2}}" aria-hidden="true" style="width: 38px; height: 38px; border-radius: 10px; display: block; background: #071422"></canvas>
+<span style="font-weight: 700; font-size: 23px; letter-spacing: -0.02em; color: #000000">Light<span class="beam">Swell</span><span style="font-size: 12px; vertical-align: super; color: #000000">™</span></span>
+</div>
+<p style="margin: 0; color: #55667A">Transform your pool into a canvas</p>
+<p style="margin: 12px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #55667A">A product by</p>
+<img src="./assets/040115438d9531907c054663dde2b0b5.png" alt="Pool On by Optoma" style="width: 210px; height: 70px; object-fit: contain; display: block">
+</div>
+<nav aria-label="Product" style="flex: 0 1 180px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-weight: 600; color: #122E49">Product</p>
+<a href="#features" style="text-decoration: none; color: #55667A">Features</a>
+<a href="#specs" style="text-decoration: none; color: #55667A">Specifications</a>
+<a href="#how" style="text-decoration: none; color: #55667A">Installation</a>
+<a href="#app" style="text-decoration: none; color: #55667A">App</a>
+</nav>
+<nav aria-label="Support" style="flex: 0 1 180px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-weight: 600; color: #122E49">Support</p>
+<a href="#specs" style="text-decoration: none; color: #55667A">Documentation</a>
+<a href="#faq" style="text-decoration: none; color: #55667A">FAQ</a>
+<a href="#order" style="text-decoration: none; color: #55667A">Contact</a>
+<a href="#order" style="text-decoration: none; color: #55667A">Warranty</a>
+</nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; padding-top: 24px; border-top: 1px solid #DCE3EA; font-size: 14px; color: #55667A">
+<p style="margin: 0">© 2025 LightSwell™. All rights reserved.</p>
+<div style="display: flex; gap: 20px"><a href="#top" style="color: #55667A">Privacy</a><a href="#top" style="color: #55667A">Terms</a><a href="#top" style="color: #55667A">Cookies</a></div>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"speed":{"editor":"range","default":1,"min":0.25,"max":2.5,"step":0.05,"section":"Laser"},"wobble":{"editor":"boolean","default":true,"section":"Laser"},"$preview":{"width":1440,"height":7200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    if (!this._refs) this._refs = {};
+    if (!this.cvs) this.cvs = {};
+    const ref = (name) => {
+      if (!this._refs[name]) {
+        this._refs[name] = (el) => {
+          if (el) { el.dataset.scene = name; this.cvs[name] = el; if (this.io) this.io.observe(el); }
+          else { delete this.cvs[name]; }
+        };
+      }
+      return this._refs[name];
+    };
+    return { refHero: ref('hero'), refApp: ref('app'), refTech: ref('tech'), refLogo1: ref('logo1'), refLogo2: ref('logo2') };
+  }
+
+  componentDidMount() {
+    if (!this.cvs) this.cvs = {};
+    this.vis = {}; this.bursts = []; this.simT = 0; this.lastNow = 0; this.lastReduced = 0;
+    try { this.reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { this.reduced = false; }
+    if (typeof IntersectionObserver !== 'undefined') {
+      this.io = new IntersectionObserver((es) => { es.forEach((e) => { this.vis[e.target.dataset.scene] = e.isIntersecting; }); }, { rootMargin: '150px' });
+      Object.keys(this.cvs).forEach((k) => this.io.observe(this.cvs[k]));
+    }
+    const loop = (now) => { this.raf = requestAnimationFrame(loop); try { this.frame(now); } catch (e) {} };
+    this.raf = requestAnimationFrame(loop);
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    if (this.io) this.io.disconnect();
+  }
+
+  frame(now) {
+    if (this.reduced) { if (now - this.lastReduced < 1000) return; this.lastReduced = now; }
+    const speed = Number(this.props.speed ?? 1);
+    const dtReal = this.lastNow ? Math.min(0.1, (now - this.lastNow) / 1000) : 0;
+    this.lastNow = now;
+    const dt = dtReal * speed;
+    this.simT += dt;
+    const t = this.reduced ? 3.4 : this.simT;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    for (const name in this.cvs) {
+      const c = this.cvs[name];
+      if (this.vis[name] === false) continue;
+      const w = c.clientWidth, h = c.clientHeight;
+      if (!w || !h) continue;
+      const W = Math.round(w * dpr), H = Math.round(h * dpr);
+      if (c.width !== W || c.height !== H) { c.width = W; c.height = H; }
+      const ctx = c.getContext('2d');
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.globalAlpha = 1;
+      const fn = this['scene_' + name];
+      if (fn) fn.call(this, ctx, w, h, t, this.reduced ? 0 : dt);
+    }
+  }
+
+  /* ---------- palette & helpers ---------- */
+  C() { return { cyan: '#39F3FF', mag: '#FF4FD8', green: '#4DFF9A', gold: '#FFC94D', blue: '#6E8BFF' }; }
+  fr(a) { const x = Math.sin(a) * 43758.5453; return x - Math.floor(x); }
+  wob() { return (this.props.wobble ?? true) ? 1 : 0; }
+  rgba(hex, a) { const n = parseInt(hex.slice(1), 16); return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')'; }
+  rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+  dot(ctx, x, y, r, col, a) {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalCompositeOperation = 'lighter';
+    const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+    g.addColorStop(0, 'rgba(255,255,255,' + Math.min(1, a) + ')');
+    g.addColorStop(0.22, this.rgba(col, a * 0.75));
+    g.addColorStop(1, this.rgba(col, 0));
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+  }
+
+  beam(ctx, x0, y0, x1, y1, col, a) {
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round'; ctx.strokeStyle = col;
+    const passes = [[7, 0.05], [2.4, 0.16], [0.8, 0.65]];
+    for (let k = 0; k < passes.length; k++) { ctx.globalAlpha = passes[k][1] * a; ctx.lineWidth = passes[k][0]; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke(); }
+    ctx.restore();
+  }
+
+  strokePolys(ctx, polys, col, alpha, lw, t) {
+    if (!polys.length || alpha <= 0) return;
+    const fl = 0.9 + 0.1 * Math.sin(t * 41);
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    const passes = [[8, 0.06, col], [3.2, 0.2, col], [1.4, 0.9, col], [0.55, 0.55, '#ffffff']];
+    for (let k = 0; k < passes.length; k++) {
+      const p = passes[k];
+      ctx.globalAlpha = p[1] * alpha * fl; ctx.strokeStyle = p[2]; ctx.lineWidth = p[0] * lw;
+      ctx.beginPath();
+      for (let j = 0; j < polys.length; j++) { const arr = polys[j]; if (arr.length < 4) continue; ctx.moveTo(arr[0], arr[1]); for (let i = 2; i < arr.length; i += 2) ctx.lineTo(arr[i], arr[i + 1]); }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  caustics(ctx, x, y, w, h, t, a) {
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.strokeStyle = 'rgba(150,235,255,' + a + ')'; ctx.lineWidth = 1.4;
+    const n = Math.max(5, Math.round(h / 34));
+    for (let k = 0; k < n; k++) {
+      ctx.beginPath();
+      for (let xx = 0; xx <= w + 14; xx += 14) {
+        const yy = y + (k + 0.5) * h / n + 7 * Math.sin(xx * 0.021 + t * 0.7 + k * 1.3) + 4 * Math.sin(xx * 0.053 - t * 1.05 + k * 2.1);
+        if (xx === 0) ctx.moveTo(x + xx, yy); else ctx.lineTo(x + xx, yy);
+      }
+      ctx.stroke();
+    }
+    const m = Math.max(5, Math.round(w / 40));
+    ctx.globalAlpha = 0.6;
+    for (let k = 0; k < m; k++) {
+      ctx.beginPath();
+      for (let yy = 0; yy <= h + 14; yy += 14) {
+        const xx = x + (k + 0.5) * w / m + 6 * Math.sin(yy * 0.025 - t * 0.6 + k * 1.7) + 3 * Math.sin(yy * 0.06 + t * 1.2 + k);
+        if (yy === 0) ctx.moveTo(xx, y + yy); else ctx.lineTo(xx, y + yy);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  seq(t, n, d, hold, fade) {
+    d = d || 2.6; hold = hold || 2.4; fade = fade || 0.8;
+    const P = d + hold + fade;
+    const i = Math.floor(t / P) % n;
+    const l = t % P;
+    const prog = Math.min(1, l / d);
+    const alpha = l > d + hold ? Math.max(0, 1 - (l - d - hold) / fade) : 1;
+    return { i: i, prog: prog, alpha: alpha, drawing: prog < 1 };
+  }
+
+  /* ---------- vector shapes (normalized to radius 1) ---------- */
+  shp(name) {
+    if (!this._shp) this._shp = {};
+    if (this._shp[name]) return this._shp[name];
+    const TAU = Math.PI * 2, S = [];
+    const circle = (r, n, cx, cy) => { cx = cx || 0; cy = cy || 0; const a = []; for (let i = 0; i <= n; i++) { const q = i / n * TAU; a.push([cx + r * Math.cos(q), cy + r * Math.sin(q)]); } return a; };
+    const poly = (r, k, rot, cx, cy, sub) => {
+      const a = [];
+      for (let i = 0; i < k; i++) {
+        const q0 = rot + i / k * TAU, q1 = rot + (i + 1) / k * TAU;
+        const x0 = cx + r * Math.cos(q0), y0 = cy + r * Math.sin(q0), x1 = cx + r * Math.cos(q1), y1 = cy + r * Math.sin(q1);
+        for (let j = 0; j < sub; j++) a.push([x0 + (x1 - x0) * j / sub, y0 + (y1 - y0) * j / sub]);
+      }
+      a.push(a[0].slice()); return a;
+    };
+    const starPoly = (k, step, r, sub) => {
+      const a = [];
+      for (let i = 0; i < k; i++) {
+        const q0 = (i * step % k) / k * TAU - Math.PI / 2, q1 = ((i + 1) * step % k) / k * TAU - Math.PI / 2;
+        const x0 = r * Math.cos(q0), y0 = r * Math.sin(q0), x1 = r * Math.cos(q1), y1 = r * Math.sin(q1);
+        for (let j = 0; j < sub; j++) a.push([x0 + (x1 - x0) * j / sub, y0 + (y1 - y0) * j / sub]);
+      }
+      a.push(a[0].slice()); return a;
+    };
+    if (name === 'rosette') {
+      const a = []; const n = 900;
+      for (let i = 0; i <= n; i++) { const q = i / n * 6 * Math.PI; a.push([(2 * Math.cos(q) + 5 * Math.cos(2 / 3 * q)) / 7, (2 * Math.sin(q) - 5 * Math.sin(2 / 3 * q)) / 7]); }
+      S.push(a, circle(1.08, 180), circle(0.24, 60));
+    } else if (name === 'burst') {
+      S.push(circle(0.16, 60));
+      for (let i = 0; i < 32; i++) { const q = i / 32 * TAU; const r1 = i % 2 ? 0.62 : 1.0; const a = []; for (let j = 0; j <= 12; j++) { const r = 0.22 + (r1 - 0.22) * j / 12; a.push([r * Math.cos(q), r * Math.sin(q)]); } S.push(a); }
+    } else if (name === 'spiral') {
+      for (let k = 0; k < 3; k++) { const a = []; for (let i = 0; i <= 280; i++) { const q = i / 280 * 5 * Math.PI; const r = 0.08 + 0.92 * i / 280; a.push([r * Math.cos(q + k * TAU / 3), r * Math.sin(q + k * TAU / 3)]); } S.push(a); }
+      S.push(circle(0.06, 30));
+    } else if (name === 'octahex') {
+      S.push(poly(1, 8, Math.PI / 8, 0, 0, 14));
+      S.push(poly(0.9, 8, Math.PI / 8, 0, 0, 14));
+      const hs = 0.15, hx = [];
+      for (let qx = -4; qx <= 4; qx++) for (let qy = -4; qy <= 4; qy++) {
+        const x = hs * 1.5 * qx * 1.12, y = hs * Math.sqrt(3) * (qy + qx / 2) * 1.12;
+        if (Math.hypot(x, y) < 0.66) hx.push([x, y]);
+      }
+      hx.sort((p, q) => Math.hypot(p[0], p[1]) - Math.hypot(q[0], q[1]));
+      hx.forEach((p) => S.push(poly(hs, 6, 0, p[0], p[1], 5)));
+    } else if (name === 'rings') {
+      for (let k = 1; k <= 4; k++) S.push(poly(k / 4, 8, Math.PI / 8 + k * 0.2, 0, 0, 12));
+    } else if (name === 'star12') {
+      S.push(starPoly(12, 5, 1, 14)); S.push(circle(0.42, 90));
+    } else if (name === 'star5') {
+      S.push(starPoly(5, 2, 1, 40)); S.push(circle(1.05, 120));
+    } else if (name === 'heart') {
+      const a = []; for (let i = 0; i <= 320; i++) { const q = i / 320 * TAU; const x = 16 * Math.pow(Math.sin(q), 3); const y = 13 * Math.cos(q) - 5 * Math.cos(2 * q) - 2 * Math.cos(3 * q) - Math.cos(4 * q); a.push([x / 17, -y / 17 + 0.08]); } S.push(a);
+      const b = []; for (let i = 0; i <= 320; i++) { const q = i / 320 * TAU; const x = 16 * Math.pow(Math.sin(q), 3); const y = 13 * Math.cos(q) - 5 * Math.cos(2 * q) - 2 * Math.cos(3 * q) - Math.cos(4 * q); b.push([x / 17 * 0.7, (-y / 17 + 0.08) * 0.7]); } S.push(b);
+    } else if (name === 'knot') {
+      const a = []; for (let i = 0; i <= 600; i++) { const q = i / 600 * TAU; a.push([(Math.sin(q) + 2 * Math.sin(2 * q)) / 3, (Math.cos(q) - 2 * Math.cos(2 * q)) / 3]); } S.push(a); S.push(circle(1.08, 140));
+    } else if (name === 'constellation') {
+      const P = [[-0.95, -0.15], [-0.62, -0.38], [-0.3, -0.22], [-0.04, -0.46], [0.12, -0.04], [0.48, 0.02], [0.6, 0.45], [0.16, 0.38]];
+      const E = [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 7], [7, 4]];
+      E.forEach((e) => { const a = []; const p = P[e[0]], q = P[e[1]]; for (let j = 0; j <= 24; j++) a.push([p[0] + (q[0] - p[0]) * j / 24, p[1] + (q[1] - p[1]) * j / 24]); S.push(a); });
+      const res = { strokes: S, total: S.reduce((s, x) => s + x.length, 0), pts: P };
+      this._shp[name] = res; return res;
+    }
+    const res = { strokes: S, total: S.reduce((s, x) => s + x.length, 0) };
+    this._shp[name] = res; return res;
+  }
+
+  /* draw a shape progressively, like a laser galvo scanning it */
+  trace(ctx, sh, tf, prog, col, alpha, t) {
+    const wob = (tf.wob || 0) * this.wob();
+    const cr = Math.cos(tf.rot || 0), sr = Math.sin(tf.rot || 0);
+    let budget = prog * sh.total; const polys = []; let head = null;
+    for (let si = 0; si < sh.strokes.length; si++) {
+      const s = sh.strokes[si];
+      if (budget <= 1) break;
+      const n = Math.min(s.length, Math.ceil(budget)); budget -= s.length;
+      const arr = [];
+      for (let i = 0; i < n; i++) {
+        const p = s[i];
+        let x = p[0] * cr - p[1] * sr, y = p[0] * sr + p[1] * cr;
+        x = tf.cx + x * tf.sx; y = tf.cy + y * tf.sy;
+        if (wob) { const ox = x, oy = y; x += wob * Math.sin(oy * 0.045 + t * 1.6); y += wob * Math.cos(ox * 0.04 + t * 1.25); }
+        arr.push(x, y);
+      }
+      polys.push(arr); head = [arr[arr.length - 2], arr[arr.length - 1]];
+    }
+    this.strokePolys(ctx, polys, col, alpha, tf.lw || 1, t);
+    return head;
+  }
+
+  /* ---------- club-style laser effects (large-area, abstract) ---------- */
+  beat(t) { return Math.pow(0.5 + 0.5 * Math.cos(t * Math.PI * 2 * 2.1), 6); }
+
+  beamS(ctx, x0, y0, x1, y1, col, a) {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+    const passes = [[18, 0.03, col], [7, 0.09, col], [2.6, 0.32, col], [1.1, 0.85, col], [0.45, 0.5, '#ffffff']];
+    for (let k = 0; k < passes.length; k++) { const p = passes[k]; ctx.globalAlpha = p[1] * a; ctx.strokeStyle = p[2]; ctx.lineWidth = p[0]; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke(); }
+    ctx.restore();
+  }
+
+  haze(ctx, A, col, a) {
+    if (a <= 0) return;
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = this.rgba(col, a); ctx.fillRect(A.x, A.y, A.w, A.h); ctx.restore();
+  }
+
+  /* sequencer mixing laser drawings and abstract effects */
+  prog(t, items) {
+    const durs = items.map((it) => it.d ? 5.0 : 5.6);
+    const total = durs.reduce((s, x) => s + x, 0);
+    let l = t % total, i = 0;
+    while (l >= durs[i]) { l -= durs[i]; i++; }
+    const dur = durs[i];
+    const env = Math.min(1, l / 0.45, (dur - l) / 0.6);
+    return { it: items[i], l: l, dur: dur, env: Math.max(0, env) };
+  }
+
+  drawStep(ctx, p, tf, src, t) {
+    const d = 2.6, hold = 1.8, fade = 0.6;
+    const prog = Math.min(1, p.l / d);
+    const alpha = p.l > d + hold ? Math.max(0, 1 - (p.l - d - hold) / fade) : 1;
+    const head = this.trace(ctx, this.shp(p.it.d), tf, prog, p.it.c, alpha, t);
+    if (head && prog < 1) { this.beam(ctx, src.x, src.y, head[0], head[1], p.it.c, 0.9); this.dot(ctx, head[0], head[1], 12, p.it.c, 1); }
+  }
+
+  fx_fan(ctx, A, src, dir, t, a, cols) {
+    const N = 16, L = Math.hypot(A.w, A.h) * 1.4, b = this.beat(t);
+    const spread = 0.5 + 0.32 * Math.sin(t * 0.6), sweep = 0.55 * Math.sin(t * 1.15);
+    for (let i = 0; i < N; i++) {
+      const f = i / (N - 1) - 0.5; const an = dir + sweep + f * spread * 2 + 0.06 * Math.sin(t * 3 + i);
+      this.beamS(ctx, src.x, src.y, src.x + Math.cos(an) * L, src.y + Math.sin(an) * L, cols[i % cols.length], a * (0.65 + 0.35 * b));
+    }
+    this.haze(ctx, A, cols[0], 0.05 * a * (0.5 + 0.5 * b));
+  }
+
+  fx_sheet(ctx, A, t, a, cols) {
+    const n = Math.max(14, Math.round(A.h / 10)); const amp = A.h * 0.07 * (0.6 + 0.4 * Math.sin(t * 0.5));
+    const phase = (t * 0.28) % 1.4 - 0.2;
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineJoin = 'round';
+    for (let i = 0; i < n; i++) {
+      const y0 = A.y + (i + 0.5) * A.h / n; const col = cols[Math.floor(i / n * cols.length) % cols.length];
+      const boost = Math.max(0, 1 - Math.abs(i / n - phase) * 7);
+      ctx.beginPath();
+      for (let x = A.x - 12; x <= A.x + A.w + 12; x += 12) { const y = y0 + amp * Math.sin(x * 0.008 + t * 1.6 + i * 0.22) + amp * 0.4 * Math.sin(x * 0.021 - t * 2.3 + i * 0.1); if (x === A.x - 12) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+      ctx.strokeStyle = col;
+      ctx.globalAlpha = (0.07 + 0.12 * boost) * a; ctx.lineWidth = 5; ctx.stroke();
+      ctx.globalAlpha = (0.45 + 0.5 * boost) * a; ctx.lineWidth = 1; ctx.stroke();
+    }
+    ctx.restore();
+    this.haze(ctx, A, cols[0], 0.04 * a);
+  }
+
+  fx_tunnel(ctx, A, c, squash, t, a, cols) {
+    const maxR = Math.hypot(A.w, A.h) * 0.62, b = this.beat(t);
+    ctx.save(); ctx.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 10; i++) {
+      const f = (t * 0.32 + i / 10) % 1; const r = f * maxR; if (r < 4) continue;
+      ctx.setLineDash([r * 0.22, r * 0.09]); ctx.lineDashOffset = -t * 90 * (i % 2 ? 1 : -1);
+      ctx.strokeStyle = cols[i % cols.length];
+      const al = a * Math.min(1, f * 4) * (1 - f * 0.6);
+      ctx.beginPath(); ctx.ellipse(c.x, c.y, r, r * squash, 0, 0, Math.PI * 2);
+      ctx.globalAlpha = 0.12 * al; ctx.lineWidth = 7; ctx.stroke();
+      ctx.globalAlpha = 0.85 * al; ctx.lineWidth = 1.4; ctx.stroke();
+    }
+    ctx.restore();
+    const rot = t * 0.6;
+    for (let k = 0; k < 16; k++) { const an = rot + k / 16 * Math.PI * 2; this.beamS(ctx, c.x, c.y, c.x + Math.cos(an) * maxR, c.y + Math.sin(an) * maxR * squash, cols[k % cols.length], a * 0.35 * (0.6 + 0.4 * b)); }
+    this.dot(ctx, c.x, c.y, 30, cols[0], a);
+  }
+
+  fx_cross(ctx, A, srcs, t, a, cols) {
+    const L = Math.hypot(A.w, A.h) * 1.4, b = this.beat(t);
+    const cx = A.x + A.w / 2, cy = A.y + A.h / 2;
+    srcs.forEach((s, si) => {
+      const base = Math.atan2(cy - s.y, cx - s.x); const sweep = 0.75 * Math.sin(t * 1.3 + si * Math.PI);
+      for (let i = 0; i < 9; i++) { const an = base + sweep + (i / 8 - 0.5) * 0.7; this.beamS(ctx, s.x, s.y, s.x + Math.cos(an) * L, s.y + Math.sin(an) * L, cols[(i + si) % cols.length], a * (0.6 + 0.4 * b)); }
+      this.dot(ctx, s.x, s.y, 22, cols[si % cols.length], a);
+    });
+    this.haze(ctx, A, cols[1 % cols.length], 0.04 * a * (0.5 + 0.5 * b));
+  }
+
+  fx_grid(ctx, A, t, a, cols) {
+    const cx = A.x + A.w / 2, cy = A.y + A.h / 2, D = Math.hypot(A.w, A.h) / 2 + 20;
+    const g = Math.max(26, A.w / 13), off = (t * 42) % g, rot = 0.3 * Math.sin(t * 0.3);
+    ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot); ctx.globalCompositeOperation = 'lighter'; ctx.strokeStyle = cols[0];
+    ctx.beginPath();
+    for (let x = -D - g + off; x <= D; x += g) { ctx.moveTo(x, -D); ctx.lineTo(x, D); }
+    for (let y = -D - g + off * 0.6; y <= D; y += g) { ctx.moveTo(-D, y); ctx.lineTo(D, y); }
+    ctx.globalAlpha = 0.08 * a; ctx.lineWidth = 5; ctx.stroke();
+    ctx.globalAlpha = 0.5 * a; ctx.lineWidth = 1; ctx.stroke();
+    ctx.restore();
+    const ph = (t * 0.45) % 1; const x = A.x - 40 + ph * (A.w + 80);
+    this.beamS(ctx, x, A.y - 10, x + A.w * 0.08, A.y + A.h + 10, cols[1 % cols.length], a);
+    this.haze(ctx, A, cols[0], 0.035 * a);
+  }
+
+  fx_rays(ctx, c, R, squash, t, a, cols) {
+    const N = 40, b = this.beat(t), rot = t * 0.45;
+    for (let i = 0; i < N; i++) { const an = rot + i / N * Math.PI * 2; const L = R * (i % 2 ? 0.75 + 0.25 * b : 1); this.beamS(ctx, c.x, c.y, c.x + Math.cos(an) * L, c.y + Math.sin(an) * L * squash, cols[i % cols.length], a * 0.55 * (0.6 + 0.4 * b)); }
+    this.dot(ctx, c.x, c.y, 40, cols[0], a * (0.6 + 0.4 * b));
+  }
+
+  /* ---------- scenes: original photos, projection animated ---------- */
+  img(name) {
+    if (!this._img) this._img = {};
+    if (!this._img[name]) {
+      const urls = {
+        heroBase: './assets/5d37f1aad0eedd08bd2f8868f646902a.jpg', heroLight: './assets/921a7248cf4bf19969826e4d54fff5b9.png',
+        appBase: './assets/2f39e3d90b6735f93d87119f6a58b8ce.jpg',
+        techBase: './assets/444837b327d9796772bdb1a3bb6bd3be.jpg', techLight: './assets/5fcdbc50657d7500969cb82bd7350008.png'
+      };
+      const im = new Image(); im.src = urls[name]; this._img[name] = im;
+    }
+    const im = this._img[name];
+    return im.complete && im.naturalWidth ? im : null;
+  }
+
+  cover(ctx, im, w, h, fx, fy) {
+    const N = 1024, s = Math.max(w / N, h / N);
+    const ox = (w - N * s) * fx, oy = (h - N * s) * fy;
+    if (im) ctx.drawImage(im, ox, oy, N * s, N * s);
+    return { s: s, ox: ox, oy: oy };
+  }
+
+  toNative(ctx, T) {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    ctx.setTransform(dpr * T.s, 0, 0, dpr * T.s, dpr * T.ox, dpr * T.oy);
+  }
+
+  /* timeline helper: list of [name, duration] -> current name, local time, envelope */
+  tl(t, list) {
+    const total = list.reduce((s, x) => s + x[1], 0);
+    let l = ((t % total) + total) % total, i = 0;
+    while (l >= list[i][1]) { l -= list[i][1]; i++; }
+    const d = list[i][1];
+    return { name: list[i][0], l: l, d: d, env: Math.max(0, Math.min(1, l / 0.8, (d - l) / 0.9)) };
+  }
+
+  light(ctx, im, x, y, a) {
+    if (!im || a <= 0) return;
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = Math.min(1, a); ctx.drawImage(im, x, y);
+    if (a > 1) { ctx.globalAlpha = a - 1; ctx.drawImage(im, x, y); }
+    ctx.restore();
+  }
+
+  /* HERO — dreamy laser show on the pool floor: starfield, constellation, fireworks, shooting stars. Source: niche at the bottom of the pool */
+  scene_hero(ctx, w, h, t, dt) {
+    const C = this.C(), CHAMP = '#FFE7A8', PEARL = '#E6FBFF';
+    ctx.fillStyle = '#0B1B2B'; ctx.fillRect(0, 0, w, h);
+    const base = this.img('heroBase');
+    const T = this.cover(ctx, base, w, h, 0.5, 0.62);
+    const og = ctx.createLinearGradient(0, 0, 0, h);
+    og.addColorStop(0, 'rgba(10,26,44,0.58)'); og.addColorStop(0.55, 'rgba(10,26,44,0.4)'); og.addColorStop(1, 'rgba(10,26,44,0.6)');
+    ctx.fillStyle = og; ctx.fillRect(0, 0, w, h);
+    if (!base) return;
+    const src = { x: 575, y: 942 };
+    ctx.save();
+    this.toNative(ctx, T);
+    ctx.beginPath(); ctx.moveTo(335, 165); ctx.lineTo(790, 165); ctx.lineTo(920, 958); ctx.lineTo(230, 958); ctx.closePath(); ctx.clip();
+
+    // 3. fireworks blooming across the pool
+    if (!this.hfw) this.hfw = [];
+    this.hfwClock = (this.hfwClock || 0) + dt;
+    const cols = [C.gold, C.mag, CHAMP, C.cyan, '#FF9AD5'];
+    const spots = [[640, 600, 150], [430, 720, 120], [700, 820, 110], [470, 480, 110], [760, 420, 100], [560, 760, 140]];
+    if (this.hfwClock > 1.35 || !this.hfw.length) {
+      this.hfwClock = 0;
+      const sp = spots[(this.hfwIdx = ((this.hfwIdx || 0) + 1) % spots.length)];
+      this.hfw.push({ x: sp[0], y: sp[1], r: sp[2], c1: cols[Math.floor(Math.random() * cols.length)], c2: CHAMP, n: 60, a: -0.55, rot: Math.random() * 6.28 });
+    }
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+    for (const b of this.hfw) {
+      b.a += dt;
+      if (b.a < 0) {
+        const k = 1 - Math.pow(-b.a / 0.55, 2); const hx = src.x + (b.x - src.x) * k, hy = src.y + (b.y - src.y) * k;
+        this.beamS(ctx, src.x, src.y, hx, hy, b.c1, 0.9);
+        this.dot(ctx, hx, hy, 16, b.c1, 1);
+        continue;
+      }
+      if (b.a < 0.25) this.beamS(ctx, src.x, src.y, b.x, b.y, b.c1, 0.9 * (1 - b.a / 0.25));
+      const pr = Math.min(1, b.a / 1.0), e = 1 - Math.pow(1 - pr, 3), fade = Math.max(0, 1 - Math.max(0, b.a - 0.8) / 1.5), droop = 14 * b.a * b.a;
+      for (let i = 0; i < b.n; i++) {
+        const q = b.rot + i / b.n * Math.PI * 2, L = b.r * e * (i % 3 === 0 ? 1 : 0.8);
+        const dx = Math.cos(q), dy = Math.sin(q);
+        ctx.strokeStyle = i % 2 ? b.c1 : b.c2;
+        ctx.beginPath(); ctx.moveTo(b.x + dx * L * 0.55, b.y + dy * L * 0.55 + droop * 0.5); ctx.lineTo(b.x + dx * L, b.y + dy * L + droop);
+        ctx.globalAlpha = 0.15 * fade; ctx.lineWidth = 7; ctx.stroke();
+        ctx.globalAlpha = 0.95 * fade; ctx.lineWidth = 1.8; ctx.stroke();
+        if (b.a > 0.6) { ctx.fillStyle = i % 2 ? b.c1 : b.c2; ctx.globalAlpha = fade * (0.5 + 0.5 * Math.sin(b.a * 20 + i)); ctx.fillRect(b.x + dx * L * 1.05 - 1.5, b.y + dy * L * 1.05 + droop - 1.5, 3, 3); }
+      }
+      if (b.a < 0.3) this.dot(ctx, b.x, b.y, 50, b.c1, 1 - b.a / 0.3);
+    }
+    ctx.restore();
+    this.hfw = this.hfw.filter((b) => b.a < 2.4);
+
+    ctx.restore();
+    ctx.save(); this.toNative(ctx, T); this.dot(ctx, src.x, src.y, 10, '#E6FBFF', 0.75); ctx.restore();
+  }
+
+  /* APP — the original fireworks + constellation, animated; then beams sweeping left-right, kept inside the pool */
+  scene_app(ctx, w, h, t, dt) {
+    const C = this.C();
+    ctx.fillStyle = '#0B1B2B'; ctx.fillRect(0, 0, w, h);
+    const base = this.img('appBase');
+    const T = this.cover(ctx, base, w, h, 0.5, 0.5);
+    if (!base) return;
+    const src = { x: 524, y: 270 };
+    ctx.save();
+    this.toNative(ctx, T);
+    // 1) water only
+    ctx.beginPath();
+    ctx.moveTo(268, 258); ctx.lineTo(640, 260); ctx.lineTo(1024, 324); ctx.lineTo(1024, 766); ctx.lineTo(0, 766); ctx.lineTo(0, 374); ctx.lineTo(262, 294); ctx.closePath();
+    ctx.clip();
+    // 2) minus phone, hand and thumb
+    ctx.beginPath();
+    ctx.rect(-20, -20, 1064, 1064);
+    ctx.rect(296, 316, 304, 600);
+    ctx.moveTo(296, 532); ctx.lineTo(236, 566); ctx.lineTo(178, 640); ctx.lineTo(170, 1024); ctx.lineTo(296, 1024); ctx.closePath();
+    ctx.rect(596, 672, 70, 136);
+    ctx.clip('evenodd');
+    const p = this.tl(t, [['show', 9], ['sweep', 6.5]]);
+    if (p.name === 'show') {
+      const s = this.seq(p.l, 1, 3.2, 4.8, 1.0);
+      const sh = this.shp('constellation');
+      const tf = { cx: 210, cy: 560, sx: 135, sy: 95, rot: -0.15, wob: 1.2, lw: 1.4 };
+      const head = this.trace(ctx, sh, tf, s.prog, C.cyan, s.alpha * p.env, t);
+      const cr = Math.cos(tf.rot), sr = Math.sin(tf.rot);
+      sh.pts.forEach((q, i) => { const tw = 0.6 + 0.4 * Math.sin(t * 3 + i * 1.3); this.dot(ctx, tf.cx + (q[0] * cr - q[1] * sr) * tf.sx, tf.cy + (q[0] * sr + q[1] * cr) * tf.sy, 14, C.cyan, s.alpha * p.env * tw * Math.min(1, p.l / 1.5)); });
+      if (head && s.drawing) this.beam(ctx, src.x, src.y, head[0], head[1], C.cyan, 0.5);
+      this.appFireworks(ctx, t, dt, p.env, true);
+    } else {
+      this.appFireworks(ctx, t, dt, 1, false);
+      const N = 12, b = this.beat(t);
+      for (let i = 0; i < N; i++) {
+        const f = i / (N - 1) - 0.5;
+        const an = Math.PI / 2 + 0.7 * Math.sin(t * 0.9) + f * 0.85;
+        this.beamS(ctx, src.x, src.y, src.x + Math.cos(an) * 1100, src.y + Math.sin(an) * 1100, [C.green, C.cyan, C.mag][i % 3], p.env * (0.65 + 0.35 * b));
+      }
+    }
+    this.dot(ctx, src.x, src.y, 7, '#E6FBFF', 0.6);
+    ctx.restore();
+  }
+
+  appFireworks(ctx, t, dt, a, spawnOn) {
+    const C = this.C(); const cols = [C.gold, C.mag, C.gold, '#FFE7A8', C.cyan];
+    if (!this.fw) this.fw = [];
+    this.fwClock = (this.fwClock || 0) + dt;
+    if (spawnOn && this.fwClock > 1.1) {
+      this.fwClock = 0;
+      const spots = [[760, 515, 175], [880, 430, 110], [690, 600, 120], [800, 470, 150]];
+      const sp = spots[(this.fwIdx = ((this.fwIdx || 0) + 1) % spots.length)];
+      this.fw.push({ x: sp[0], y: sp[1], r: sp[2], c1: cols[Math.floor(Math.random() * cols.length)], c2: '#FFE7A8', n: 54, a: 0, rot: Math.random() * 6.28 });
+    }
+    if (spawnOn && !this.fw.length) this.fw.push({ x: 760, y: 515, r: 175, c1: C.gold, c2: '#FFE7A8', n: 54, a: 0.5, rot: 0 });
+    ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+    for (const b of this.fw) {
+      b.a += dt;
+      const pr = Math.min(1, b.a / 0.9), e = 1 - Math.pow(1 - pr, 3), fade = Math.max(0, 1 - Math.max(0, b.a - 0.7) / 1.3) * a, droop = 26 * b.a * b.a;
+      for (let i = 0; i < b.n; i++) {
+        const q = b.rot + i / b.n * Math.PI * 2, L = b.r * e * (i % 3 === 0 ? 1 : 0.8), dx = Math.cos(q), dy = Math.sin(q) * 0.62;
+        ctx.strokeStyle = i % 2 ? b.c1 : b.c2;
+        ctx.beginPath(); ctx.moveTo(b.x + dx * L * 0.5, b.y + dy * L * 0.5 + droop * 0.5); ctx.lineTo(b.x + dx * L, b.y + dy * L + droop);
+        ctx.globalAlpha = 0.16 * fade; ctx.lineWidth = 6; ctx.stroke();
+        ctx.globalAlpha = 0.95 * fade; ctx.lineWidth = 1.6; ctx.stroke();
+      }
+      if (b.a < 0.3) this.dot(ctx, b.x, b.y, 46, b.c1, (1 - b.a / 0.3) * a);
+    }
+    ctx.restore();
+    this.fw = this.fw.filter((b) => b.a < 2);
+  }
+
+  /* TECH — only the existing octagon projection is animated: it appears, turns on the floor, breathes and disappears */
+  scene_tech(ctx, w, h, t) {
+    ctx.fillStyle = '#0B1B2B'; ctx.fillRect(0, 0, w, h);
+    const base = this.img('techBase'), oct = this.img('techLight');
+    const T = this.cover(ctx, base, w, h, 0.5, 0.5);
+    if (!base || !oct) return;
+    const CX = 650, CY = 832, k = 0.41;
+    const P = 9.5, l = t % P;
+    let a = 0, reveal = 1;
+    if (l < 1.4) { reveal = l / 1.4; a = 1; }
+    else if (l < 7.6) { a = 1; }
+    else if (l < 8.4) { a = (1 - (l - 7.6) / 0.8) * (0.6 + 0.4 * Math.abs(Math.sin(l * 40))); }
+    const rot = (t * 0.35) % (Math.PI * 2);
+    const pulse = 1 + 0.035 * Math.sin(t * 2.6);
+    ctx.save();
+    this.toNative(ctx, T);
+    if (reveal < 1) { ctx.beginPath(); ctx.ellipse(CX, CY, 320 * reveal + 1, 135 * reveal + 1, 0, 0, Math.PI * 2); ctx.clip(); }
+    ctx.translate(CX, CY); ctx.scale(1, k); ctx.rotate(rot); ctx.scale(pulse, pulse / k); ctx.translate(-CX, -CY);
+    this.light(ctx, oct, 355, 700, a * (0.95 + 0.1 * Math.sin(t * 5)));
+    ctx.restore();
+  }
+
+  scene_logo1(ctx, w, h, t) {
+    ctx.fillStyle = '#071422'; ctx.fillRect(0, 0, w, h);
+    const s = this.seq(t, 1, 2.2, 2.2, 0.6);
+    const head = this.trace(ctx, this.shp('octahex'), { cx: w / 2, cy: h / 2, sx: w * 0.38, sy: w * 0.38, rot: 0, wob: 0, lw: 0.35 }, s.prog, '#39F3FF', s.alpha, t);
+    if (head && s.drawing) this.dot(ctx, head[0], head[1], 4, '#39F3FF', 1);
+  }
+
+  scene_logo2(ctx, w, h, t) { this.scene_logo1(ctx, w, h, t + 1.3); }
+}
+</script>
+</body>
+</html>
